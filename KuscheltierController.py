@@ -1,5 +1,6 @@
-from SimonSays import simonSagt
+#!/usr/bin/python3.5
 
+from SimonSays import simonSagt
 
 def main():
     while True:
