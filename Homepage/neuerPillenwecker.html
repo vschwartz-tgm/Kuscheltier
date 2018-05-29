@@ -11,43 +11,51 @@
 <body>
 	<div class="container border border-dark rounded">
 		<form>
-  		<div class="form-group">
-    		<label for="pillenName"><h2>Pillenname</h2></label>
-    		<input type="text" class="form-control" id="pillenName" />
+  		<div class="form-group row">
+    		<label for="pillenName" class="col-sm-2 col-form-label" ><h2>Pillenname</h2></label>
+        <div class="col-sm-10">
+    		  <input type="text" class="form-control form-control-lg" id="pillenName" />
+        </div>
   		</div>
-      <h2>Einnahmetage</h2>
-		  <div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox1" />
-  			<label class="form-check-label" for="checkBox1"><h5>Montag</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox2" />
-  			<label class="form-check-label" for="checkBox2"><h5>Dienstag</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox3" />
-  			<label class="form-check-label" for="checkBox3"><h5>Mittwoch</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox4" />
-  			<label class="form-check-label" for="checkBox4"><h5>Donnerstag</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox5"/>
-  			<label class="form-check-label" for="checkBox5"><h5>Freitag</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox6"/>
-  			<label class="form-check-label" for="checkBox6"><h5>Samstag</h5></label>
-  		</div>
-  		<div class="form-check">
-    		<input class="form-check-input" type="checkbox" value="" id="checkBox7"/>
-  			<label class="form-check-label" for="checkBox7"><h5>Sonntag</h5></label>
-  		</div>
+      <div class="form-group row">
+        <div class="col-form-label col-sm-2"><h2>Tage</h2></div>
+          <div class="col-sm-10">
+		        <div class="form-check" style="padding-top: 20px;">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox1" />
+              <label class="form-check-label" for="checkBox1"><h5>Montag</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox2" />
+              <label class="form-check-label" for="checkBox2"><h5>Dienstag</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox3" />
+  			      <label class="form-check-label" for="checkBox3"><h5>Mittwoch</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox4" />
+  			      <label class="form-check-label" for="checkBox4"><h5>Donnerstag</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox5"/>
+              <label class="form-check-label" for="checkBox5"><h5>Freitag</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox6"/>
+              <label class="form-check-label" for="checkBox6"><h5>Samstag</h5></label>
+  		      </div>
+  		      <div class="form-check">
+    		      <input class="form-check-input" type="checkbox" value="" id="checkBox7"/>
+  			      <label class="form-check-label" for="checkBox7"><h5>Sonntag</h5></label>
+  		      </div>
+          </div>
+        </div>
       <br />
-      <div class="form-group">
-        <label for="zeit"><h2>Pillenname</h2></label>
-        <input class="form-control" type="time" id="zeit" name="zeit"/>
+      <div class="form-group row">
+        <label for="zeit" class="col-sm-2 col-form-label"><h2>Pillenname</h2></label>
+        <div class="col-sm-10">
+          <input class="form-control form-control-lg" type="time" id="zeit" name="zeit"/>
+        </div>
       </div>
       <div class="clearfix">
               <button type="button" class="cancelbtn rounded" onclick ="window.location = 'pillenwecker.html'"><h5>Abbrechen</h5></button>
