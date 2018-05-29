@@ -1,5 +1,6 @@
 ﻿create Table Buch(
-	genre varchar(20),
+	name varchar(255) PRIMARY KEY,
+    genre varchar(20),
 	ausgewählt bool,
 	varchar path(255)
 );
