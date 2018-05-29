@@ -2,7 +2,7 @@
 	name varchar(255) PRIMARY KEY,
     genre varchar(20),
 	ausgewählt bool,
-	varchar path(255)
+	path varchar(255)
 );
 
 create Table Termine(

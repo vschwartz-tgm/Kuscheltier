@@ -50,5 +50,32 @@ class Pillenwecker(){
     }     
 }
 
+class Termine(){
+    private name;
+    private datum;
+    private uhrzeit;
+    private beschreibung;
+    private ort;
+    private hinweis;
 
+    function __construct($n, $d, $u, $b, $o, $h){
+        $this->name = n;
+        $this->datum = d;
+        $this->urzeit = u;
+        $this->beschreibung = b;
+        $this->ort = o;
+        $this-> hinweis = h;
+    }
+
+    public function add(){
+        $dbconn = pg_connect("");
+        $insert = "INSERT INTO Termine VALUES('$this->datum','$this->uhrzeit','$this->beschreibung','$this->ort','$this->hinweis');";
+        $sql = pg_query($dbconn, $insert);
+    }
+
+    public function del(){
+        $dbconn = pg_connect("");
+        $del = "DELETE FROM Termine WHERE name = '$this->name';";
+    }
+}
 ?>
