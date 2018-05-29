@@ -78,4 +78,15 @@ class Termine(){
         $del = "DELETE FROM Termine WHERE name = '$this->name';";
     }
 }
+
+
+class Buch(){
+    }
+
+    public function getSelected(){
+        $select = "SELECT name, genre, path FROM Buch WHERE ausgewählt = true;";
+        $sql = pg_query($dbconn, $select);
+    }
+
+}
 ?>
