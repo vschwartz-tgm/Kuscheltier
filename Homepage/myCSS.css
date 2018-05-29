@@ -1,7 +1,7 @@
 body{
 	margin-left: 10px;
 	margin-right: 10px;
-	background-color:#F4F4F4;
+	/*background-color:#F4F4F4;*/
 }
 
 .nav-img{
@@ -24,3 +24,37 @@ body{
 .btn-big{
 	width: 50%;
 }
+
+.container{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.cancelbtn, .addbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.cancelbtn, .addbtn:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .addbtn {
+  float: left;
+  width: 50%;
+}
+
