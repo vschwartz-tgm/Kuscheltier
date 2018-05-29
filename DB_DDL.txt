@@ -1,25 +1,26 @@
 ﻿create Table Buch(
-	genre varchar(20), 
-	ausgewählt bool, 
+	genre varchar(20),
+	ausgewählt bool,
 	varchar path(255)
 );
 
 create Table Termine(
-	datum date, 
-	uhrzeit time, 
-	beschreibung varchar(100), 
-	ort varchar(50), 
+	name varchar(50) PRIMARY KEY,
+    datum date,
+	uhrzeit time,
+	beschreibung varchar(100),
+	ort varchar(50),
 	hinweis varchar(100)
 );
 
 create Table Pillen(
-	name varchar(50),
-	montag bool, 
-	dienstag bool, 
-	mittwoch bool, 
-	donnerstag bool, 
-	freitag bool, 
-	samstag bool, 
-	sonntag bool, 
+	name varchar(50) PRIMARY KEY,
+	montag bool,
+	dienstag bool,
+	mittwoch bool,
+	donnerstag bool,
+	freitag bool,
+	samstag bool,
+	sonntag bool,
 	zeit time
 );
