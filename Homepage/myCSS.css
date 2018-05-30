@@ -4,6 +4,16 @@ body{
 	/*background-color:#F4F4F4;*/
 }
 
+.font{
+	font-size: 30px;
+}
+
+.scroll{
+	height:300px;
+  	overflow-y:scroll;
+  	width:100%;
+}
+
 .nav-img{
 	width: 5vw;
 	background-color:#F4F4F4;
