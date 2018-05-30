@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -13,7 +15,6 @@
 		<nav class="navbar navbar-expand-sm navbar-light bg-light border border-dark rounded">
 			<!-- Brand -->
 			<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>
-
 			<!-- Links -->
 			<div class="collapse navbar-collapse" id="nav-content">   
 				<ul class="nav navbar-nav">
@@ -21,25 +22,24 @@
 						<a class="nav-link" href="index.html"><h2>Startseite</h2></a>
 					</li>
 					<li class="nav-item active px-sm-2 pt-sm-3">
-						<a class="nav-link" href="pillenwecker.html"><h2>Pillenwecker</h2></a>
+						<a class="nav-link" href="pillenwecker.php"><h2>Pillenwecker</h2></a>
 					</li>
 					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="terminplanung.html"><h2>Terminplanung</h2></a>
+						<a class="nav-link" href="terminplanung.php"><h2>Terminplanung</h2></a>
 					</li>
 					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="buechervorlesen.html"><h2>Bücher vorlesen</h2></a>
+						<a class="nav-link" href="buechervorlesen.php"><h2>Bücher vorlesen</h2></a>
 					</li>
 					<li class="nav-item pt-sm-3">
-						<a class="nav-link" href="notfallsignal.html"><h2>Notfallsignal<h2></a>
+						<a class="nav-link" href="notfallsignal.php"><h2>Notfallsignal<h2></a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		
 		<div align="center">
 			<p><h1>Aktuelle Pillenwecker</h1></p>
 		</div>
-
+		
 		<table class="table table-hover">
 			<thead>
 				<tr>
@@ -75,47 +75,10 @@
 				</tr>
 			<tbody>
 		</table>
-
 		<div align="center">
-			<a href="neuerPillenwecker.html">
+			<a href="neuerPillenwecker.php">
 				<button type="button"  class="btn btn-outline-dark btn-lg btn-big">Neuer Pillenwecker</button>
 			</a>
 		</div>
-
-		<!--
-		<div align="center">
-			<button type="button" class="btn btn-outline-dark btn-lg btn-big" data-toggle="modal" data-target="#neuerPillenwecker">Neuer Pillenwecker</button>
-		</div>
-
-		Modal 
-		<div class="modal fade" id="neuerPillenwecker">
-		  <div class="modal-dialog">
-			<div class="modal-content">
-
-			   Modal Header 
-			  <div class="modal-header">
-				<h4 class="modal-title">Neuer Pillenwecker</h4>
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-			  </div>
-			  
-			  Modal body 
-			  <div class="modal-body">
-				Modal body..
-			  </div>
-
-			   Modal footer
-			  <div class="modal-footer">
-				<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-			  </div>
-
-			</div>
-		  </div>
-		</div>
-
-		<script>
-		  $('#neuerPillenwecker').on('shown.bs.modal', function() {
-		  $('#myInput').focus()})
-		</script>
-		-->
 	</body>
 </html>
