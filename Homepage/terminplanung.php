@@ -41,51 +41,51 @@
 		<div align="center">
 			<p><h1>Terminplanung</h1></p>
 		</div>
-
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th scope="col">Datum</th>
-					<th scope="col">Uhrzeit</th>
-					<th scope="col">Termin</th>
-					<th scope="col">Ort</th>
-					<th scope="col">Hinweis</th>
-					<th scope="col"></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td scope="row">1.5.2018</td>
-					<td>12:00</td>
-					<td>Zahnarzt</td>
-					<td>Meidling</td>
-					<td>E-Card</td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				<tr>
-					<td scope="row">6.5.2018</td>
-					<td>13:00</td>
-					<td>Familienessen</td>
-					<td>Gumpendorferstraße 8</td>
-					<td></td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				</tr>
-				<tr>
-					<td scope="row">7.7.2018</td>
-					<td>12:00</td>
-					<td>Zahnarzt</td>
-					<td>Meidling</td>
-					<td>E-Card</td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				</tr>
-			<tbody>
-		</table>
-
+		<div class="container scroll font">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Datum</th>
+						<th scope="col">Uhrzeit</th>
+						<th scope="col">Termin</th>
+						<th scope="col">Ort</th>
+						<th scope="col">Hinweis</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">1.5.2018</td>
+						<td>12:00</td>
+						<td>Zahnarzt</td>
+						<td>Meidling</td>
+						<td>E-Card</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					<tr>
+						<td scope="row">6.5.2018</td>
+						<td>13:00</td>
+						<td>Familienessen</td>
+						<td>Gumpendorferstraße 8</td>
+						<td></td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">7.7.2018</td>
+						<td>12:00</td>
+						<td>Zahnarzt</td>
+						<td>Meidling</td>
+						<td>E-Card</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+				<tbody>
+			</table>
+		</div>
 		<div align="center">
 			<button type="button" class="btn btn-outline-dark btn-lg btn-big" onclick ="window.location = 'neuerTermin.php'">Neuen Termin hinzufügen</button>
 		</div>

@@ -39,42 +39,43 @@
 		<div align="center">
 			<p><h1>Aktuelle Pillenwecker</h1></p>
 		</div>
-		
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th scope="col">Pillenname</th>
-					<th scope="col">Einnahmezeit</th>
-					<th scope="col">Tage</th>
-					<th scope="col"></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">Pille 1</th>
-					<td>08:00</td>
-					<td>MO,DI,MI,DO,FR,SA,SO</td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				<tr>
-					<th scope="row">Pille 2</th>
-					<td>10:00</td>
-					<td>MO,DO</td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				</tr>
-				<tr>
-					<th scope="row">Pille 3</th>
-					<td>20:00</td>
-					<td>SA</td>
-					<td>
-						<button type="button" class="btn btn-outline-dark">Löschen</button>
-					</td>
-				</tr>
-			<tbody>
-		</table>
+		<div class="container scroll font">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Pillenname</th>
+						<th scope="col">Einnahmezeit</th>
+						<th scope="col">Tage</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Pille 1</th>
+						<td>08:00</td>
+						<td>MO,DI,MI,DO,FR,SA,SO</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					<tr>
+						<th scope="row">Pille 2</th>
+						<td>10:00</td>
+						<td>MO,DO</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Pille 3</th>
+						<td>20:00</td>
+						<td>SA</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+				<tbody>
+			</table>
+		</div>
 		<div align="center">
 			<a href="neuerPillenwecker.php">
 				<button type="button"  class="btn btn-outline-dark btn-lg btn-big">Neuer Pillenwecker</button>
