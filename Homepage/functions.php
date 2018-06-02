@@ -26,7 +26,7 @@ class Pillenwecker{
     }
 
     public function add(){
-        $dbconn = pg_connect("host=localhost port=5432 dbname=kuscheltier user=christoph password=admin");
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=admin password=password");
         $fehler = false;
 
         if($fehler == false){
@@ -40,7 +40,7 @@ class Pillenwecker{
         }
     }
     public function del(){
-        $dbconn = pg_connect("host=localhost port=5432 dbname=kuscheltier user=christoph password=admin");
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=postgres password=admin");
         $fehler = false;
 
         if($fehler == false){

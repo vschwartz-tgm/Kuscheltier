@@ -1,6 +1,10 @@
 <?php
+	include("functions.php");
+
 	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['submit'])){
 		// ToDo: Werte rauslesen & in DB speichern
+		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so, $zeit);
+		$p->add();
 	}
 ?>
 <html>
