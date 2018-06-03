@@ -37,9 +37,6 @@
 				</ul>
 			</div>
 		</nav>
-		<div align="center">
-			<p><h1>Aktuelle Notfalldaten</h1></p>
-		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm">
@@ -48,20 +45,20 @@
 							<h4>Daten des Kuscheltiernutzers</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text">Name: Max Mustermann</p>
-							<p class="card-text">Adresse: Musterstraße 88</p>
-							<p class="card-text">Telefon: 06501234567</p>
+							<p class="card-text">Name: <input type="text" id="nameNutzer" name="nameNutzer" value="Max Mustermann"/></p>
+							<p class="card-text">Adresse: <input type="text" id="adresseNutzer" name="adresseNutzer" value="Musterstraße 88"/></p>
+							<p class="card-text">Telefon: <input type="number" id="nrNutzer" name="nrNutzer" value="06501234567"/></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="card">
 						<div class="card-header">
-							<h4>Daten des Notfallkontaks</h4>
+							<h4>Daten des Notfallkontakts</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text">Name: Leo Musterfrau</p>
-							<p class="card-text">Telefon: 06501223267</p>
+							<p class="card-text">Name: <input type="text" id="nameKontakt" name="nameKontakt" value="Leo Musterfrau"/></p>
+							<p class="card-text">Telefon: <input type="number" id="nrKontakt" name="nrKontakt" value="06501223267" /></p>
 							<br />
 							<p class="card-text"></p>
 						</div>
@@ -70,7 +67,7 @@
 			</div>
 		</div>
 		<div align="center">
-			<button type="button" class="btn btn-outline-dark btn-lg btn-big" onclick ="window.location = 'notfallsignal_login.php'">Daten ändern</button>
+			<button type="button" class="btn btn-outline-success btn-lg btn-big" onclick ="window.location = 'notfallsignal.php'">Änderungen speichern</button>
 		</div>
 	</body>
 </html>

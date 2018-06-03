@@ -38,39 +38,22 @@
 			</div>
 		</nav>
 		<div align="center">
-			<p><h1>Aktuelle Notfalldaten</h1></p>
+			<p><h1>Code eingeben</h1></p>
 		</div>
+		<br />
 		<div class="container">
-			<div class="row">
-				<div class="col-sm">
-					<div class="card">
-						<div class="card-header">
-							<h4>Daten des Kuscheltiernutzers</h4>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Name: Max Mustermann</p>
-							<p class="card-text">Adresse: Musterstraße 88</p>
-							<p class="card-text">Telefon: 06501234567</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm">
-					<div class="card">
-						<div class="card-header">
-							<h4>Daten des Notfallkontaks</h4>
-						</div>
-						<div class="card-body">
-							<p class="card-text">Name: Leo Musterfrau</p>
-							<p class="card-text">Telefon: 06501223267</p>
-							<br />
-							<p class="card-text"></p>
-						</div>
-					</div>
-				</div>
+			<div class="input-group input-group-lg">
+	  			<div class="input-group-prepend">
+	    			<p class="input-group-text" id="inputGroup-sizing-lg">Code</p>
+	  			</div>
+	  			<input type="text" class="form-control" id="codeInput" name="codeInput" aria-label="Code" aria-describedby="inputGroup-sizing-sm">
 			</div>
-		</div>
-		<div align="center">
-			<button type="button" class="btn btn-outline-dark btn-lg btn-big" onclick ="window.location = 'notfallsignal_login.php'">Daten ändern</button>
+			<br />
+			<br />
+			<div align="center">
+				<button type="button" class="btn btn-outline-danger btn-lg btn-big"  style="float: left;" onclick ="window.location = 'notfallsignal.php'">Zurück</button>
+				<button type="button" class="btn btn-outline-success btn-lg btn-big" style="" onclick ="window.location = 'notfallsignal_ändern.php'">Einloggen</button>
+			</div>
 		</div>
 	</body>
 </html>
