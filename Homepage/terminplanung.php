@@ -39,7 +39,7 @@
 		</nav>
 
 		<div align="center">
-			<p><h1>Terminplanung</h1></p>
+			<p><h1>Zukünftige Termine</h1></p>
 		</div>
 		<div class="container scroll font">
 			<table class="table table-hover">

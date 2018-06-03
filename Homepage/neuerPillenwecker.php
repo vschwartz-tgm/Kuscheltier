@@ -3,10 +3,9 @@
 
 	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['submit'])){
 		// ToDo: Werte rauslesen & in DB speichern
-<<<<<<< HEAD
 		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so, $zeit);
 		$p->add();
-=======
+
 		if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['submit'])){
 			if ($_POST["Montag"] == "1"){
 				// Montag angeklickt
@@ -30,7 +29,6 @@
 				// Sonntag angeklickt
 			}
 		}
->>>>>>> 5498931994f09d0612764aaea9a9f262ed2d8a5a
 	}
 ?>
 <html>

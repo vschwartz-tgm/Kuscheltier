@@ -37,8 +37,67 @@
 				</ul>
 			</div>
 		</nav>
+
 		<div align="center">
 			<p><h1>Aktuelle Bücher</h1></p>
 		</div>
+		<div class="container scroll font">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">Titel</th>
+						<th scope="col">Genre</th>
+						<th scope="col">Dauer</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td scope="row">Herr der RInge</td>
+						<td>Fantasy</td>
+						<td>3:00:00</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">Herr der RInge</td>
+						<td>Fantasy</td>
+						<td>3:00:00</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">Herr der RInge</td>
+						<td>Fantasy</td>
+						<td>3:00:00</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">Herr der RInge</td>
+						<td>Fantasy</td>
+						<td>3:00:00</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+					<tr>
+						<td scope="row">Herr der RInge</td>
+						<td>Fantasy</td>
+						<td>3:00:00</td>
+						<td>
+							<button type="button" class="btn btn-outline-dark">Löschen</button>
+						</td>
+					</tr>
+				<tbody>
+			</table>
+		</div>
+		<div align="center">
+			<button type="button" class="btn btn-outline-dark btn-lg btn-big" onclick ="window.location = 'neuesBuch.php'">Neues Buch hinzufügen</button>
+		</div>
+
 	</body>
 </html>
