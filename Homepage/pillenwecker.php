@@ -39,8 +39,8 @@
 		<div align="center">
 			<p><h1>Aktuelle Pillenwecker</h1></p>
 		</div>
-		<div class="container scroll font">
-			<table class="table table-hover">
+		<div class="container scroll">
+			<table class="table table-hover font">
 				<thead>
 					<tr>
 						<th scope="col">Pillenname</th>
@@ -55,14 +55,14 @@
 						<td>08:00</td>
 						<td>MO,DI,MI,DO,FR,SA,SO</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					<tr>
 						<th scope="row">Pille 2</th>
 						<td>10:00</td>
 						<td>MO,DO</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -70,7 +70,7 @@
 						<td>20:00</td>
 						<td>SA</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 				<tbody>

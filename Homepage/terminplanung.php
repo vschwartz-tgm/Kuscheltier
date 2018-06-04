@@ -41,8 +41,8 @@
 		<div align="center">
 			<p><h1>Zukünftige Termine</h1></p>
 		</div>
-		<div class="container scroll font">
-			<table class="table table-hover">
+		<div class="container scroll">
+			<table class="table table-hover font">
 				<thead>
 					<tr>
 						<th scope="col">Datum</th>
@@ -61,7 +61,7 @@
 						<td>Meidling</td>
 						<td>E-Card</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					<tr>
 						<td scope="row">6.5.2018</td>
@@ -70,7 +70,7 @@
 						<td>Gumpendorferstraße 8</td>
 						<td></td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -80,7 +80,7 @@
 						<td>Meidling</td>
 						<td>E-Card</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 				<tbody>

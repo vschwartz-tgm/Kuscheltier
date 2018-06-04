@@ -41,8 +41,8 @@
 		<div align="center">
 			<p><h1>Aktuelle Bücher</h1></p>
 		</div>
-		<div class="container scroll font">
-			<table class="table table-hover">
+		<div class="container scroll">
+			<table class="table table-hover font">
 				<thead>
 					<tr>
 						<th scope="col">Titel</th>
@@ -57,7 +57,7 @@
 						<td>Fantasy</td>
 						<td>3:00:00</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -65,7 +65,7 @@
 						<td>Fantasy</td>
 						<td>3:00:00</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -73,7 +73,7 @@
 						<td>Fantasy</td>
 						<td>3:00:00</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -81,7 +81,7 @@
 						<td>Fantasy</td>
 						<td>3:00:00</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
@@ -89,7 +89,7 @@
 						<td>Fantasy</td>
 						<td>3:00:00</td>
 						<td>
-							<button type="button" class="btn btn-outline-dark">Löschen</button>
+							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 				<tbody>
