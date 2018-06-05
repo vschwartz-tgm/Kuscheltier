@@ -48,9 +48,9 @@
 							<h4>Daten des Kuscheltiernutzers</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text">Name: Max Mustermann</p>
-							<p class="card-text">Adresse: Musterstraße 88</p>
-							<p class="card-text">Telefon: 06501234567</p>
+							<p class="card-text"><h3>Name: Max Mustermann</h3></p>
+							<p class="card-text"><h3>Adresse: Musterstraße 88</h3></p>
+							<p class="card-text"><h3>Telefon: 06501234567</h3></p>
 						</div>
 					</div>
 				</div>
@@ -60,8 +60,8 @@
 							<h4>Daten des Notfallkontaks</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text">Name: Leo Musterfrau</p>
-							<p class="card-text">Telefon: 06501223267</p>
+							<p class="card-text"><h3>Name: Leo Musterfrau</h3></p>
+							<p class="card-text"><h3>Telefon: 06501223267</h3></p>
 							<br />
 							<p class="card-text"></p>
 						</div>

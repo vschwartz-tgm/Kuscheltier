@@ -45,49 +45,49 @@
 			<table class="table table-hover">
 				<thead>
 					<tr>
-						<th scope="col">Titel</th>
-						<th scope="col">Genre</th>
-						<th scope="col">Dauer</th>
+						<th scope="col"><h3>Titel</h3></th>
+						<th scope="col"><h3>Genre</h3></th>
+						<th scope="col"><h3>Dauer</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td scope="row">Herr der RInge</td>
-						<td>Fantasy</td>
-						<td>3:00:00</td>
+						<td scope="row"><h3>Herr der Ringe</h3></td>
+						<td><h3>Fantasy</h3></td>
+						<td><h3>3:00:00</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
 						</td>
 					</tr>
 					<tr>
-						<td scope="row">Herr der RInge</td>
-						<td>Fantasy</td>
-						<td>3:00:00</td>
+						<td scope="row"><h3>Herr der Ringe</h3></td>
+						<td><h3>Fantasy</h3></td>
+						<td><h3>3:00:00</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
 						</td>
 					</tr>
 					<tr>
-						<td scope="row">Herr der RInge</td>
-						<td>Fantasy</td>
-						<td>3:00:00</td>
+						<td scope="row"><h3>Herr der Ringe</h3></td>
+						<td><h3>Fantasy</h3></td>
+						<td><h3>3:00:00</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
 						</td>
 					</tr>
 					<tr>
-						<td scope="row">Herr der RInge</td>
-						<td>Fantasy</td>
-						<td>3:00:00</td>
+						<td scope="row"><h3>Herr der Ringe</h3></td>
+						<td><h3>Fantasy</h3></td>
+						<td><h3>3:00:00</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
 						</td>
 					</tr>
 					<tr>
-						<td scope="row">Herr der RInge</td>
-						<td>Fantasy</td>
-						<td>3:00:00</td>
+						<td scope="row"><h3>Herr der Ringe</h3></td>
+						<td><h3>Fantasy</h3></td>
+						<td><h3>3:00:00</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
 						</td>

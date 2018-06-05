@@ -43,32 +43,32 @@
 			<table class="table table-hover font">
 				<thead>
 					<tr>
-						<th scope="col">Pillenname</th>
-						<th scope="col">Einnahmezeit</th>
-						<th scope="col">Tage</th>
+						<th scope="col"><h3>Pillenname</h3></th>
+						<th scope="col"><h3>Einnahmezeit</h3></th>
+						<th scope="col"><h3>Tage</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th scope="row">Pille 1</th>
-						<td>08:00</td>
-						<td>MO,DI,MI,DO,FR,SA,SO</td>
+						<th scope="row"><h3>Pille 1</h3></th>
+						<td><h3>08:00</h3></td>
+						<td><h3>MO,DI,MI,DO,FR,SA,SO</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					<tr>
-						<th scope="row">Pille 2</th>
-						<td>10:00</td>
-						<td>MO,DO</td>
+						<th scope="row"><h3>Pille 2</h3></th>
+						<td><h3>10:00</h3></td>
+						<td><h3>MO,DO</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">Pille 3</th>
-						<td>20:00</td>
-						<td>SA</td>
+						<th scope="row"><h3>Pille 3</h3></th>
+						<td><h3>20:00</h3></td>
+						<td><h3>SA</h3></td>
 						<td>
 							<button type="button" class="btn btn-outline-danger">Löschen</button>
 						</td>
