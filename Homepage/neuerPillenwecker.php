@@ -58,31 +58,31 @@
 					<div class="col-sm-10">
 						<div class="form-check" style="padding-top: 20px;">
 							<input class="form-check-input" type="checkbox" value="1" name="Montag" id="checkBox1" />
-							<label class="form-check-label" for="checkBox1"><h5>Montag</h5></label>
+							<label class="form-check-label" for="checkBox1"><h4>Montag</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="Dienstag" id="checkBox2" />
-							<label class="form-check-label" for="checkBox2"><h5>Dienstag</h5></label>
+							<label class="form-check-label" for="checkBox2"><h4>Dienstag</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="Mittwoch" id="checkBox3" />
-							<label class="form-check-label" for="checkBox3"><h5>Mittwoch</h5></label>
+							<label class="form-check-label" for="checkBox3"><h4>Mittwoch</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="Donnerstag" id="checkBox4" />
-							<label class="form-check-label" for="checkBox4"><h5>Donnerstag</h5></label>
+							<label class="form-check-label" for="checkBox4"><h4>Donnerstag</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="Freitag" id="checkBox5"/>
-							<label class="form-check-label" for="checkBox5"><h5>Freitag</h5></label>
+							<label class="form-check-label" for="checkBox5"><h4>Freitag</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="1" name="Samstag" id="checkBox6"/>
-							<label class="form-check-label" for="checkBox6"><h5>Samstag</h5></label>
+							<label class="form-check-label" for="checkBox6"><h4>Samstag</h4></label>
 						</div>
 						<div class="form-check">
 							<input class="form-check-input" type="checkbox" value="" name="Sonntag" id="checkBox7"/>
-							<label class="form-check-label" for="checkBox7"><h5>Sonntag</h5></label>
+							<label class="form-check-label" for="checkBox7"><h4>Sonntag</h4></label>
 						</div>
 					</div>
 				</div>
