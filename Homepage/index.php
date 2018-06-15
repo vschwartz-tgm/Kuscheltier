@@ -10,15 +10,15 @@
 	<link href="myCSS.css" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-sm navbar-light bg-light border border-dark rounded">
+		<nav class="navbar navbar-expand-sm navbar-light border border-primary rounded" style="background-color: #66CCFF;">
 			<!-- Brand -->
-			<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>
+			<!--<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>-->
 
 			<!-- Links -->
 			<div class="collapse navbar-collapse" id="nav-content">   
 				<ul class="nav navbar-nav">
 					<li class="nav-item active px-sm-2 pt-sm-3">
-						<a class="nav-link" href="index.html"><h2>Startseite</h2></a>
+						<a class="nav-link" href="index.php" style="margin-left: 36px;"><h1>Startseite</h1></a>
 					</li>
 					<li class="nav-item px-sm-2 pt-sm-3">
 						<a class="nav-link" href="pillenwecker.php"><h2>Pillenwecker</h2></a>
@@ -52,10 +52,7 @@
 						accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum 
 						dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel 
 						illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent 
-						luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer 
-						adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
-						wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea 
-						commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+						luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-xs-4 thumb">
