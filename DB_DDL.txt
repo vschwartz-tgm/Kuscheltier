@@ -1,4 +1,7 @@
-﻿create Table Buch(
+﻿user: postgres
+pw: pi
+
+create Table Buch(
 	name varchar(255) PRIMARY KEY,
     	genre varchar(20),
 	ausgewählt bool,
