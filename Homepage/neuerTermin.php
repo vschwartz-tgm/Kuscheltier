@@ -1,6 +1,16 @@
 <?php
+    include('functions.php');
+
 	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['submit'])){
-		// ToDo: Werte rauslesen & in DB speichern
+        $name = $_POST['terminName'];
+        $datum = $_POST['datum'];
+        $uhrzeit = $_POST['zeit'];
+        $beschreibung = $_POST['desc'];
+        $ort = $_POST['ort'];
+        $hinweis = $_POST['hinweis'];
+
+		$t = new Termine($name, $datum, $uhrzeit, $beschreibung, $ort, $hinweis);
+		$t->add();
 	}
 ?>
 <html>
@@ -22,7 +32,7 @@
 				<div class="form-group row">
 					<label for="terminName" class="col-sm-2 col-form-label" ><h3>Terminname</h3></label>
 					<div class="col-sm-10">
-						  <input type="text" class="form-control form-control-lg" id="terminName" />
+                        <input type="text" class="form-control form-control-lg" id="terminName" />
 					</div>
 				</div>
 				<div class="form-group row">

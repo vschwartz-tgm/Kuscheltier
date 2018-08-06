@@ -1,13 +1,13 @@
 ﻿create Table Buch(
 	name varchar(255) PRIMARY KEY,
-    genre varchar(20),
+    	genre varchar(20),
 	ausgewählt bool,
 	path varchar(255)
 );
 
 create Table Termine(
 	name varchar(50) PRIMARY KEY,
-    datum date,
+    	datum date,
 	uhrzeit time,
 	beschreibung varchar(100),
 	ort varchar(50),

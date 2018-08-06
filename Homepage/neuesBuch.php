@@ -1,4 +1,14 @@
 <?php
+    include('functions.php');
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['submit'])){
+        $name = $_POST[''];
+        $genre = $_POST[''];
+        $path = $_POST[''];
+
+        $b = new Buch();
+        $b->setSelected($name, $genre, $path);
+    }
 	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
 ?>
 <html>
