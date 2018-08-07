@@ -74,57 +74,39 @@ class Termine{
         pg_execute($dbconn,"myquery", $insertValue);
     }
 
-    public function del(){
+}
+
+class ShowTermine{
+    function __construct(){
+
+    }
+
+    public function del($name){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $del = "DELETE FROM termine WHERE name = '$this->name';";
+        $del = "DELETE FROM termine WHERE name = '$name';";
         pg_query($dbconn, $del);
     }
 
     public function show(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $terminName = "SELECT name FROM termine WHERE name = '$this->name';";
-        $sql = pg_query($dbconn, $terminName);
-        $row = pg_fetch_row($sql);
+        $termine = "SELECT * FROM termine WHERE name is not null;";
+        $sql = pg_query($dbconn, $termine);
+        $termineArr = pg_fetch_all($sql);
 
-        while ($row = pg_fetch_row($sql)) {
-            $terminName = "SELECT name FROM termine WHERE name = '$row[0]';";
-            $sqlname = pg_query($dbconn, $terminName);
-            $ergname = pg_fetch_row($sqlname);
-
-            $datum = "select datum from termine where name = '$row[0]';";
-            $sqldatum = pg_query($dbconn, $datum);
-            $ergdatum = pg_fetch_row($sqldatum);
-
-            $uhrzeit = "select uhrzeit from termine where name = '$ergname';";
-            $sqluhrzeit = pg_query($dbconn, $uhrzeit);
-            $erguhrzeit = pg_fetch_row($sqluhrzeit);
-
-            $desc = "select beschreibung from termine where name = '$ergname';";
-            $sqldesc = pg_query($dbconn, $desc);
-            $ergdesc = pg_fetch_row($sqldesc);
-
-            $ort = "select ort from termine where name = '$ergname';";
-            $sqlort = pg_query($dbconn, $ort);
-            $ergort = pg_fetch_row($sqlort);
-
-            $hinweis = "select hinweis from termine where name = '$ergname';";
-            $sqlhinweis = pg_query($dbconn, $hinweis);
-            $erghinweis = pg_fetch_row($sqlhinweis);
-
+        foreach($termineArr as $termin){
             echo   "<tr>
-						<td scope='row'><h3><?php echo $ergname ?></h3></td>
-						<td><h3><? php echo $ergdatum ?></h3></td>
-						<td><h3><? php echo $erguhrzeit ?></h3></td>
-						<td><h3><? php echo $ergdesc ?></h3></td>
-						<td><h3><? php echo $ergort ?></h3></td>
-						<td><h3><? php echo $erghinweis ?></h3></td>
-						<td>
-							<button type='button' class='btn btn-outline-danger'>Löschen</button>
-						</td>
+                        <td scope='row'><h3>".$termin['name']."</h3></td>
+                        <td><h3>".$termin['datum']."</h3></td>
+                        <td><h3>".$termin['uhrzeit']."</h3></td>
+                        <td><h3>".$termin['beschreibung']."</h3></td>
+                        <td><h3>".$termin['ort']."</h3></td>
+                        <td><h3>".$termin['hinweis']."</h3></td>
+                        <td>
+                            <button type='button' class='btn btn-outline-danger' onclick='".$this->del($termin['name'])."'>Löschen</button>
+                        </td>
                     </tr>";
         }
     }
-
 }
 
 

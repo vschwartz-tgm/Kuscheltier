@@ -56,7 +56,7 @@
 				</thead>
 				<tbody>
 					<?php
-                        $s = new Termine("a","a","a","a","a","a");
+                        $s = new ShowTermine();
                         $s->show();
 					?>
 				<tbody>
