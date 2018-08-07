@@ -6,43 +6,43 @@
             // Montag angeklickt
             $m = $_POST['Montag'];
         }else{
-            $m = false;
+            $m = '0';
         }
         if (isset($_POST['Dienstag']) and $_POST['Dienstag'] == '1'){
             // Dienstag angeklickt
             $d = $_POST['Dienstag'];
         }else{
-            $d = false;
+            $d = '0';
         }
         if (isset($_POST['Mittwoch']) and $_POST['Mittwoch'] == '1'){
             // Mittwoch angeklickt
             $mi = $_POST['Mittwoch'];
         }else{
-            $mi = false;
+            $mi = '0';
         }
         if (isset($_POST['Donnerstag']) and $_POST['Donnerstag'] == '1'){
             // Donnerstag angeklickt
             $do = $_POST['Donnerstag'];
         }else{
-            $do = false;
+            $do = '0';
         }
         if (isset($_POST['Freitag']) and $_POST['Freitag'] == '1'){
             // Freitag angeklickt
             $fr = $_POST['Freitag'];
         }else{
-            $fr = false;
+            $fr = '0';
         }
         if (isset($_POST['Samstag']) and $_POST['Samstag'] == '1'){
             // Samstag angeklickt
             $sa = $_POST['Samstag'];
         }else{
-            $sa = false;
+            $sa = '0';
         }
         if (isset($_POST['Sonntag']) and $_POST['Sonntag'] == '1'){
             // Sonntag angeklickt
             $so = $_POST['Sonntag'];
         }else{
-            $so = false;
+            $so = '0';
         }
 
 	    $name = $_POST['pillenName'];
@@ -72,7 +72,7 @@
 				<div class='form-group row'>
 					<label for='pillenName' class='col-sm-2 col-form-label' ><h3>Pillenname</h3></label>
 					<div class='col-sm-10'>
-						  <input type='text' class='form-control form-control-lg' id='pillenName' required/>
+						  <input type='text' class='form-control form-control-lg' name="pillenName" id='pillenName' required/>
 					</div>
 				</div>
 				<div class='form-group row'>

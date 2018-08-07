@@ -2,7 +2,7 @@
     include('functions.php');
 
 	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['submit'])){
-        $name = $_POST['terminName'];
+	    $name = $_POST['terminName'];
         $datum = $_POST['datum'];
         $uhrzeit = $_POST['zeit'];
         $beschreibung = $_POST['desc'];
@@ -11,6 +11,8 @@
 
 		$t = new Termine($name, $datum, $uhrzeit, $beschreibung, $ort, $hinweis);
 		$t->add();
+
+		echo $name, $datum, $uhrzeit, $beschreibung, $ort, $hinweis;
 	}
 ?>
 <html>
@@ -32,7 +34,7 @@
 				<div class="form-group row">
 					<label for="terminName" class="col-sm-2 col-form-label" ><h3>Terminname</h3></label>
 					<div class="col-sm-10">
-                        <input type="text" class="form-control form-control-lg" id="terminName" />
+                        <input type="text" class="form-control form-control-lg" name="terminName" id="terminName" />
 					</div>
 				</div>
 				<div class="form-group row">

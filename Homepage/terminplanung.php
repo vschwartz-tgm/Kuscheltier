@@ -1,5 +1,5 @@
 <?php
-	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
+	include("functions.php");
 ?>
 <html>
 	<head>
@@ -45,44 +45,20 @@
 			<table class="table table-hover font">
 				<thead>
 					<tr>
+						<th scope="col"><h3>Name</h3></th>
 						<th scope="col"><h3>Datum</h3></th>
 						<th scope="col"><h3>Uhrzeit</h3></th>
-						<th scope="col"><h3>Termin</h3></th>
+						<th scope="col"><h3>Beschreibung</h3></th>
 						<th scope="col"><h3>Ort</h3></th>
-						<th scope="col"><h3>Hinweis</h3></th>
+                        <th scope="col"><h3>Hinweis</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td scope="row"><h3>1.5.2018</h3></td>
-						<td><h3>12:00</h3></td>
-						<td><h3>Zahnarzt</h3></td>
-						<td><h3>Meidling</h3></td>
-						<td><h3>E-Card</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					<tr>
-						<td scope="row"><h3>6.5.2018</h3></td>
-						<td><h3>13:00</h3></td>
-						<td><h3>Familienessen</h3></td>
-						<td><h3>Gumpendorferstraße 8</h3></td>
-						<td></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>7.7.2018</h3></td>
-						<td><h3>12:00</h3></td>
-						<td><h3>Zahnarzt</h3></td>
-						<td><h3>Meidling</h3></td>
-						<td><h3>E-Card</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
+					<?php
+                        $s = new Termine("a","a","a","a","a","a");
+                        $s->show();
+					?>
 				<tbody>
 			</table>
 		</div>

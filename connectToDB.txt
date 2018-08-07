@@ -1,0 +1,6 @@
+user: postgres
+pw: pi? (sudo su postgres)
+
+psql;
+\connect teddy;
+\dt (zeigt alle tabellen)
