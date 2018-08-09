@@ -1,5 +1,5 @@
 <?php
-	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
+	include("functions.php");
 ?>
 <html>
 	<head>
@@ -46,52 +46,16 @@
 				<thead>
 					<tr>
 						<th scope="col"><h3>Titel</h3></th>
+						<th scope="col"><h3>Autor</h3></th>
 						<th scope="col"><h3>Genre</h3></th>
-						<th scope="col"><h3>Dauer</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
+                <?php
+                    $b = new Buch();
+                    $b->getSelected();
+                ?>
 				<tbody>
 			</table>
 		</div>

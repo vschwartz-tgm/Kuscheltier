@@ -1,5 +1,5 @@
 <?php
-	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
+	include("functions.php");
 ?>
 <html>
 	<head>
@@ -48,20 +48,23 @@
 							<h4>Daten des Kuscheltiernutzers</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text"><h3>Name: Max Mustermann</h3></p>
-							<p class="card-text"><h3>Adresse: Musterstraße 88</h3></p>
-							<p class="card-text"><h3>Telefon: 06501234567</h3></p>
+                            <?php
+                            $s = new Kuscheltiernutzer();
+                            $s->show();
+                            ?>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="card">
 						<div class="card-header">
-							<h4>Daten des Notfallkontaks</h4>
+							<h4>Daten des Notfallkontakts</h4>
 						</div>
 						<div class="card-body">
-							<p class="card-text"><h3>Name: Leo Musterfrau</h3></p>
-							<p class="card-text"><h3>Telefon: 06501223267</h3></p>
+                            <?php
+                            $s = new Notfallkontakt();
+                            $s->show();
+                            ?>
 							<br />
 							<p class="card-text"></p>
 						</div>

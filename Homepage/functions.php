@@ -77,9 +77,7 @@ class Termine{
 }
 
 class ShowTermine{
-    function __construct(){
-
-    }
+    function __construct(){}
 
     public function del($name){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
@@ -102,11 +100,71 @@ class ShowTermine{
                         <td><h3>".$termin['ort']."</h3></td>
                         <td><h3>".$termin['hinweis']."</h3></td>
                         <td>
-                            <button type='button' class='btn btn-outline-danger' onclick='".$this->del($termin['name'])."'>Löschen</button>
+                            <button type='button' class='btn btn-outline-danger' >Löschen</button>
                         </td>
                     </tr>";
         }
     }
+}
+
+class Kuscheltiernutzer{
+    function __construct(){}
+
+    function show(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $nname = "SELECT name FROM kuscheltiernutzer WHERE name is not null;";
+        $sql = pg_query($dbconn, $nname);
+        $nname = pg_fetch_row($sql);
+
+        $nadresse = "SELECT adresse FROM kuscheltiernutzer WHERE name is not null;";
+        $sql = pg_query($dbconn, $nadresse);
+        $nadresse = pg_fetch_row($sql);
+
+        $ntel = "SELECT tel FROM kuscheltiernutzer WHERE name is not null;";
+        $sql = pg_query($dbconn, $ntel);
+        $ntel = pg_fetch_row($sql);
+
+            echo   "<p class=\'card-text\'><h3>Name: $nname[0]</h3></p>
+			        <p class=\'card-text\'><h3>Adresse: $nadresse[0]</h3></p>
+				    <p class=\'card-text\'><h3>Telefon: $ntel[0]</h3></p>";
+    }
+}
+
+
+class Notfallkontakt{
+    private $update;
+    function __construct(){}
+
+    function show(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $nname = "SELECT name FROM notfallkontakt WHERE name is not null;";
+        $sql = pg_query($dbconn, $nname);
+        $nname = pg_fetch_row($sql);
+
+        $ntel = "SELECT tel FROM notfallkontakt WHERE name is not null;";
+        $sql = pg_query($dbconn, $ntel);
+        $ntel = pg_fetch_row($sql);
+
+        echo    "<p class=\'card-text\'><h3>Name: $nname[0]</h3></p>
+			    <p class=\'card-text\'><h3>Telefon: $ntel[0]</h3></p>";
+
+    }
+
+    function update(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+
+        if(func_num_args() == 2){
+            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."' and tel = '".func_get_arg(1)."';";
+        }
+        elseif (strpbrk(func_get_arg(0), '1234567890') !== FALSE){
+            $update = "UPDATE notfallkontakt SET tel = '".func_get_arg(0)."';";
+        }else{
+            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."';";
+        }
+
+        pg_query($dbconn, $update);
+    }
+
 }
 
 
@@ -114,13 +172,45 @@ class Buch{
 
     public function getSelected(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $select = "SELECT name, genre, path FROM buch WHERE ausgewählt = true;";
-        pg_query($dbconn, $select);
+        $select = "SELECT name, genre, author, path FROM buch WHERE ausgewaehlt = true;";
+        $sql = pg_query($dbconn, $select);
+        $buchArr = pg_fetch_all($sql);
+
+        foreach($buchArr as $buch){
+            echo "<tr>
+						<td scope='row'><h3>".$buch['name']."</h3></td>
+						<td><h3>".$buch['author']."</h3></td>
+						<td><h3>".$buch['genre']."</h3></td>
+						<td>
+							<button type='button' class='btn btn-outline-danger'>Löschen</button>
+						</td>
+					</tr>";
+        }
     }
 
-    public function setSelected($name, $genre, $path){
+    public function getNotSelected(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $set = "UPDATE buch SET ausgewählt = true WHERE name = '$name' AND genre = '$genre' AND path = '$path';";
+        $select = "SELECT name, genre, author, path FROM buch WHERE ausgewaehlt = false;";
+        $sql = pg_query($dbconn, $select);
+        $buchArr = pg_fetch_all($sql);
+
+        foreach($buchArr as $buch){
+            echo "<tr>
+						<td scope='row'><h3>".$buch['name']."</h3></td>
+						<td><h3>".$buch['author']."</h3></td>
+						<td><h3>".$buch['genre']."</h3></td>
+						<td>
+						    <form action='' method='post'>
+							    <input type='submit' class='btn btn-outline-success' name='add' value='Hinzufügen' />
+						    </form>
+						</td>
+					</tr>";
+        }
+    }
+
+    public function setSelected($name, $author){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $set = "UPDATE buch SET ausgewählt = true WHERE name = '$name' and author = '$author';";
         pg_query($dbconn, $set);
     }    
 

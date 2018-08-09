@@ -2,12 +2,13 @@
     include('functions.php');
 
     if($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['submit'])){
-        $name = $_POST[''];
-        $genre = $_POST[''];
+        $name = $_POST['name'];
+        $autor = $_POST['author'];
+        $genre = $_POST['genre'];
         $path = $_POST[''];
-
+        echo "$name,$genre,$autor,$path";
         $b = new Buch();
-        $b->setSelected($name, $genre, $path);
+        $b->setSelected($name, $autor);
     }
 	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
 ?>
@@ -22,18 +23,17 @@
 		<link href="myCSS.css" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-sm navbar-light bg-light border border-dark rounded">
+		<nav class="navbar navbar-expand-sm navbar-light border border-primary rounded" style="background-color: #66CCFF;">
 			<!-- Brand -->
-			<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>
-
+			<!--<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>-->
 			<!-- Links -->
 			<div class="collapse navbar-collapse" id="nav-content">   
 				<ul class="nav navbar-nav">
 					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="index.html"><h2>Startseite</h2></a>
+						<a class="nav-link" href="index.php" style="margin-left: 36px;"><h2>Startseite</h2></a>
 					</li>
 					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="pillenwecker.php"><h2>Pillenwecker</h2></a>
+						<a class="nav-link" href="pillenwecker.php"><h1>Pillenwecker</h1></a>
 					</li>
 					<li class="nav-item px-sm-2 pt-sm-3">
 						<a class="nav-link" href="terminplanung.php"><h2>Terminplanung</h2></a>
@@ -56,52 +56,16 @@
 				<thead>
 					<tr>
 						<th scope="col"><h3>Titel</h3></th>
+						<th scope="col"><h3>Autor</h3></th>
 						<th scope="col"><h3>Genre</h3></th>
-						<th scope="col"><h3>Dauer</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
-						</td>
-					</tr>
-					<tr>
-						<td scope="row"><h3>Herr der Ringe</h3></td>
-						<td><h3>Fantasy</h3></td>
-						<td><h3>3:00:00</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-success">Hinzufügen</button>
-						</td>
-					</tr>
+					<?php
+						$b = new Buch();
+						$b->getNotSelected();
+					?>
 				<tbody>
 			</table>
 		</div>

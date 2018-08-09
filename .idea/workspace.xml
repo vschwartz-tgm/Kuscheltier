@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49666a56-0463-4be5-958f-1c70da4851ca" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_DDL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DB_DDL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/buechervorlesen.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/buechervorlesen.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homepage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/neuerTermin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuerTermin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/terminplanung.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/terminplanung.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/neuesBuch.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuesBuch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,29 +20,31 @@
     <session id="-1660860667">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="1124" />
+          <entry key="php" value="2453" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1" />
-          <entry key="PHP" value="1123" />
+          <entry key="HTML" value="12" />
+          <entry key="PHP" value="2441" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="1" />
+          <entry key="php" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="1" />
+          <entry key="PHP" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -49,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="103" column="28" lean-forward="true" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+            <state relative-caret-position="342">
+              <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -58,20 +63,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="243">
+              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/neuerPillenwecker.php">
+        <entry file="file://$PROJECT_DIR$/Homepage/buechervorlesen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="986">
+              <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -79,17 +81,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-644">
+            <state relative-caret-position="221">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+        <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state relative-caret-position="1105">
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -125,11 +136,14 @@
         <option value="$PROJECT_DIR$/KuscheltierController.py" />
         <option value="$PROJECT_DIR$/SimonSays.py" />
         <option value="$PROJECT_DIR$/Homepage/pillenwecker.php" />
-        <option value="$PROJECT_DIR$/Homepage/neuesBuch.php" />
         <option value="$PROJECT_DIR$/Homepage/terminplanung.php" />
         <option value="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" />
         <option value="$PROJECT_DIR$/Homepage/neuerTermin.php" />
+        <option value="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" />
+        <option value="$PROJECT_DIR$/Homepage/notfallsignal.php" />
+        <option value="$PROJECT_DIR$/Homepage/buechervorlesen.php" />
         <option value="$PROJECT_DIR$/Homepage/functions.php" />
+        <option value="$PROJECT_DIR$/Homepage/neuesBuch.php" />
       </list>
     </option>
   </component>
@@ -149,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,7 +180,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Unknown.KuscheltierController1961565819">
+  <component name="RunManager" selected="Unknown.KuscheltierController1821838081">
     <configuration name="KuscheltierController" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -253,18 +267,20 @@
       <option name="presentableId" value="Default" />
       <updated>1533541165268</updated>
       <workItem from="1533541168623" duration="9803000" />
-      <workItem from="1533626429657" duration="14795000" />
+      <workItem from="1533626429657" duration="14843000" />
+      <workItem from="1533712928546" duration="8137000" />
+      <workItem from="1533797533854" duration="2005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24598000" />
+    <option name="totallyTimeSpent" value="34788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2582996" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2672065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,19 +341,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-588" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DbConnection.py">
@@ -345,41 +351,59 @@
         <state relative-caret-position="-888" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/neuerPillenwecker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-644">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="2125">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        <state relative-caret-position="969">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/buechervorlesen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="103" column="28" lean-forward="true" selection-start-line="103" selection-start-column="28" selection-end-line="103" selection-end-column="28" />
+        <state relative-caret-position="342">
+          <caret line="164" column="35" lean-forward="true" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
         </state>
       </provider>
     </entry>

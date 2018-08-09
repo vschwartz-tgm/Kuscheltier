@@ -1,5 +1,5 @@
 <?php
-	// ToDo: Werte aus DB lesen und in die Tabelle schreiben (PHP im Text)
+	include("functions.php");
 ?>
 <html>
 	<head>

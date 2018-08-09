@@ -25,3 +25,14 @@ create Table Pillen(
 	sonntag bool,
 	zeit time
 );
+
+create Table Notfallkontakt(
+	name varchar(100) PRIMARY KEY,
+	tel varchar(16)
+);
+
+create Table Kuscheltiernutzer(
+	name varchar(50) PRIMARY KEY,
+	adresse varchar(100),
+	tel varchar(16)
+);
