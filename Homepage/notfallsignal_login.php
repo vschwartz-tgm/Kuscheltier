@@ -12,31 +12,30 @@
 		<link href="myCSS.css" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-sm navbar-light bg-light border border-dark rounded">
-			<!-- Brand -->
-			<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>
-
-			<!-- Links -->
-			<div class="collapse navbar-collapse" id="nav-content">   
-				<ul class="nav navbar-nav">
-					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="index.html"><h2>Startseite</h2></a>
-					</li>
-					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="pillenwecker.php"><h2>Pillenwecker</h2></a>
-					</li>
-					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="terminplanung.php"><h2>Terminplanung</h2></a>
-					</li>
-					<li class="nav-item px-sm-2 pt-sm-3">
-						<a class="nav-link" href="buechervorlesen.php"><h2>Bücher vorlesen</h2></a>
-					</li>
-					<li class="nav-item active pt-sm-3">
-						<a class="nav-link" href="notfallsignal.php"><h2>Notfallsignal<h2></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+    <nav class="navbar navbar-expand-sm navbar-light border border-primary rounded" style="background-color: #66CCFF;">
+        <!-- Brand -->
+        <!--<a class="navbar-brand" href="index.html"><img src="Assets/home.png" class="nav-img"></a>-->
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="nav-content">
+            <ul class="nav navbar-nav">
+                <li class="nav-item px-sm-2 pt-sm-3">
+                    <a class="nav-link" href="index.php" style="margin-left: 36px;"><h2>Startseite</h2></a>
+                </li>
+                <li class="nav-item px-sm-2 pt-sm-3">
+                    <a class="nav-link" href="pillenwecker.php"><h2>Pillenwecker</h2></a>
+                </li>
+                <li class="nav-item px-sm-2 pt-sm-3">
+                    <a class="nav-link" href="terminplanung.php"><h2>Terminplanung</h2></a>
+                </li>
+                <li class="nav-item px-sm-2 pt-sm-3">
+                    <a class="nav-link" href="buechervorlesen.php"><h2>Bücher vorlesen</h2></a>
+                </li>
+                <li class="nav-item active pt-sm-3">
+                    <a class="nav-link" href="notfallsignal.php"><h1>Notfallsignal<h1></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 		<div align="center">
 			<p><h1>Code eingeben</h1></p>
 		</div>

@@ -10,18 +10,20 @@ class Pillenwecker{
     private $freitag;
     private $samstag;
     private $sonntag;
+    private $anzahl;
     private $zeit;
 
 
-    function __construct($n, $m, $d, $mi, $donnerstag, $f, $s, $so, $z){
+    function __construct($n, $m, $d, $mi, $do, $f, $s, $so, $anz, $z){
         $this->name = $n;
         $this->montag = $m;
         $this->dienstag = $d;
         $this->mittwoch = $mi;
-        $this->donnerstag = $donnerstag;
+        $this->donnerstag = $do;
         $this->freitag = $f;
         $this->samstag = $s;
         $this->sonntag = $so;
+        $this->anzahl = $anz;
         $this->zeit = $z;
     }
 
@@ -31,7 +33,7 @@ class Pillenwecker{
 
         if($fehler == false){
             
-            $insert = "INSERT INTO pillen VALUES('$this->name','$this->montag','$this->dienstag','$this->mittwoch','$this->donnerstag','$this->freitag','$this->samstag','$this->sonntag','$this->zeit');";
+            $insert = "INSERT INTO pillen VALUES('$this->name','$this->montag','$this->dienstag','$this->mittwoch','$this->donnerstag','$this->freitag','$this->samstag','$this->sonntag','$this->anzahl','$this->zeit');";
             pg_query($dbconn, $insert);
             
             
@@ -48,6 +50,50 @@ class Pillenwecker{
             pg_query($dbconn, $del);
         } 
     }     
+}
+
+class showPillen{
+    function __construct(){}
+
+    public function show(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $pillen = "SELECT * FROM pillen WHERE name is not null;";
+        $sql = pg_query($dbconn, $pillen);
+        $pillenArr = pg_fetch_all($sql);
+
+
+        foreach($pillenArr as $pille){ //zwischen zeit und anzahl die Tage ausgeben
+            $tage = $this->showDays($pille['name']);
+            echo   "<tr>
+                        <td scope='row'><h3>".$pille['name']."</h3></td>
+                        <td><h3>".$pille['zeit']."</h3></td>
+                        <td><h3>".$this->showDays($pille['name'])."</h3></td>
+                        <td><h3>".$pille['anzahl']."</h3></td>
+                        <td>
+                            <button type='button' class='btn btn-outline-danger' >Löschen</button>
+                        </td>
+                    </tr>";
+        }
+    }
+
+    public function showDays($name){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $days = "SELECT mo,di,mi,donnerstag,fr,sa,so FROM pillen WHERE name = '$name';";
+        $sql = pg_query($dbconn, $days);
+        $i = pg_num_fields($sql);
+        $row = pg_fetch_row($sql);
+        $string = "";
+
+
+        for ($j = 0; $j < $i; $j++){
+            $fieldname = pg_field_name($sql, $j);
+            if($row[$j] == 't'){
+                $string .= $fieldname.",";
+            }
+        }
+
+        return $string;
+    }
 }
 
 class Termine{
@@ -110,6 +156,48 @@ class ShowTermine{
 class Kuscheltiernutzer{
     function __construct(){}
 
+    function getName(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $nname = "SELECT name FROM kuscheltiernutzer WHERE name is not null;";
+        $sql = pg_query($dbconn, $nname);
+        $nname = pg_fetch_row($sql);
+
+        echo "$nname[0]";
+    }
+
+    function getAdress(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $nadress = "SELECT adresse FROM kuscheltiernutzer WHERE name is not null;";
+        $sql = pg_query($dbconn, $nadress);
+        $nadress = pg_fetch_row($sql);
+
+        echo "$nadress[0]";
+    }
+
+    function getTel(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $ntel = "SELECT tel FROM notfallkontakt WHERE name is not null;";
+        $sql = pg_query($dbconn, $ntel);
+        $ntel = pg_fetch_row($sql);
+
+        echo "$ntel[0]";
+    }
+
+    function update(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+
+        if(func_num_args() == 3){
+            $update = "UPDATE kuscheltiernutzer SET name = '".func_get_arg(0)."', adresse = '".func_get_arg(1)."', tel = '".func_get_arg(2)."';";
+        }/*
+        elseif (strpbrk(func_get_arg(0), '1234567890') !== FALSE){
+            $update = "UPDATE notfallkontakt SET tel = '".func_get_arg(0)."';";
+        }else{
+            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."';";
+        }*/
+
+        pg_query($dbconn, $update);
+    }
+
     function show(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
         $nname = "SELECT name FROM kuscheltiernutzer WHERE name is not null;";
@@ -135,6 +223,24 @@ class Notfallkontakt{
     private $update;
     function __construct(){}
 
+    function getName(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $nname = "SELECT name FROM notfallkontakt WHERE name is not null;";
+        $sql = pg_query($dbconn, $nname);
+        $nname = pg_fetch_row($sql);
+
+        echo "$nname[0]";
+    }
+
+    function getTel(){
+        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
+        $ntel = "SELECT tel FROM notfallkontakt WHERE name is not null;";
+        $sql = pg_query($dbconn, $ntel);
+        $ntel = pg_fetch_row($sql);
+
+        echo "$ntel[0]";
+    }
+
     function show(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
         $nname = "SELECT name FROM notfallkontakt WHERE name is not null;";
@@ -154,13 +260,13 @@ class Notfallkontakt{
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
 
         if(func_num_args() == 2){
-            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."' and tel = '".func_get_arg(1)."';";
-        }
+            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."', tel = '".func_get_arg(1)."';";
+        }/*
         elseif (strpbrk(func_get_arg(0), '1234567890') !== FALSE){
             $update = "UPDATE notfallkontakt SET tel = '".func_get_arg(0)."';";
         }else{
             $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."';";
-        }
+        }*/
 
         pg_query($dbconn, $update);
     }

@@ -58,7 +58,7 @@
 				<div class="col-sm">
 					<div class="card">
 						<div class="card-header">
-							<h4>Daten des Notfallkontakts</h4>
+							<h4>Daten des Notfallkontaktes</h4>
 						</div>
 						<div class="card-body">
                             <?php

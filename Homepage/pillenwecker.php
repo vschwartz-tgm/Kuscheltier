@@ -50,33 +50,15 @@
 						<th scope="col"><h3>Pillenname</h3></th>
 						<th scope="col"><h3>Einnahmezeit</h3></th>
 						<th scope="col"><h3>Tage</h3></th>
+                        <th scope="col"><h3>Anzahl</h3></th>
 						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row"><h3>Pille 1</h3></th>
-						<td><h3>08:00</h3></td>
-						<td><h3>MO,DI,MI,DO,FR,SA,SO</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					<tr>
-						<th scope="row"><h3>Pille 2</h3></th>
-						<td><h3>10:00</h3></td>
-						<td><h3>MO,DO</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row"><h3>Pille 3</h3></th>
-						<td><h3>20:00</h3></td>
-						<td><h3>SA</h3></td>
-						<td>
-							<button type="button" class="btn btn-outline-danger">Löschen</button>
-						</td>
-					</tr>
+                <?php
+                $s = new showPillen();
+                $s->show();
+                ?>
 				<tbody>
 			</table>
 		</div>

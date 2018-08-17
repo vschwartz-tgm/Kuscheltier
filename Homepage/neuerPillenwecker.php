@@ -4,51 +4,52 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST' and isset($_POST['submit'])){
         if (isset($_POST['Montag']) and $_POST['Montag'] == '1'){
             // Montag angeklickt
-            $m = $_POST['Montag'];
+            $m = 't';
         }else{
-            $m = '0';
+            $m = 'f';
         }
         if (isset($_POST['Dienstag']) and $_POST['Dienstag'] == '1'){
             // Dienstag angeklickt
-            $d = $_POST['Dienstag'];
+            $d = 't';
         }else{
-            $d = '0';
+            $d = 'f';
         }
         if (isset($_POST['Mittwoch']) and $_POST['Mittwoch'] == '1'){
             // Mittwoch angeklickt
-            $mi = $_POST['Mittwoch'];
+            $mi = 't';
         }else{
-            $mi = '0';
+            $mi = 'f';
         }
         if (isset($_POST['Donnerstag']) and $_POST['Donnerstag'] == '1'){
             // Donnerstag angeklickt
-            $do = $_POST['Donnerstag'];
+            $do = 't';
         }else{
-            $do = '0';
+            $do = 'f';
         }
         if (isset($_POST['Freitag']) and $_POST['Freitag'] == '1'){
             // Freitag angeklickt
-            $fr = $_POST['Freitag'];
+            $fr = 't';
         }else{
-            $fr = '0';
+            $fr = 'f';
         }
         if (isset($_POST['Samstag']) and $_POST['Samstag'] == '1'){
             // Samstag angeklickt
-            $sa = $_POST['Samstag'];
+            $sa = 't';
         }else{
-            $sa = '0';
+            $sa = 'f';
         }
         if (isset($_POST['Sonntag']) and $_POST['Sonntag'] == '1'){
             // Sonntag angeklickt
-            $so = $_POST['Sonntag'];
+            $so = 't';
         }else{
-            $so = '0';
+            $so = 'f';
         }
 
 	    $name = $_POST['pillenName'];
+        $anz = $_POST['anzahl'];
 	    $zeit = $_POST['zeit'];
 
-		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so, $zeit);
+		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so, $anz, $zeit);
 		$p->add();
 
 	}
@@ -83,32 +84,39 @@
 							<label class="form-check-label" for="checkBox1"><h4>Montag</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="2" name="Dienstag" id="checkBox2" />
+							<input class="form-check-input" type="checkbox" value="1" name="Dienstag" id="checkBox2" />
 							<label class="form-check-label" for="checkBox2"><h4>Dienstag</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="3" name="Mittwoch" id="checkBox3" />
+							<input class="form-check-input" type="checkbox" value="1" name="Mittwoch" id="checkBox3" />
 							<label class="form-check-label" for="checkBox3"><h4>Mittwoch</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="4" name="Donnerstag" id="checkBox4" />
+							<input class="form-check-input" type="checkbox" value="1" name="Donnerstag" id="checkBox4" />
 							<label class="form-check-label" for="checkBox4"><h4>Donnerstag</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="5" name="Freitag" id="checkBox5"/>
+							<input class="form-check-input" type="checkbox" value="1" name="Freitag" id="checkBox5"/>
 							<label class="form-check-label" for="checkBox5"><h4>Freitag</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="6" name="Samstag" id="checkBox6"/>
+							<input class="form-check-input" type="checkbox" value="1" name="Samstag" id="checkBox6"/>
 							<label class="form-check-label" for="checkBox6"><h4>Samstag</h4></label>
 						</div>
 						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="7" name="Sonntag" id="checkBox7"/>
+							<input class="form-check-input" type="checkbox" value="1" name="Sonntag" id="checkBox7"/>
 							<label class="form-check-label" for="checkBox7"><h4>Sonntag</h4></label>
 						</div>
 					</div>
 				</div>
 				<br />
+                <div class="form-group row">
+                    <label for="anzahl" class="col-sm-2 col-form-label"><h3>Anzahl</h3></label>
+                    <div class="col-sm-10">
+                        <input class="form-control form-control-lg" type="number" id="anzahl" name="anzahl" required/>
+                    </div>
+                </div>
+                <br />
 				<div class="form-group row">
 					<label for="zeit" class="col-sm-2 col-form-label"><h3>Uhrzeit</h3></label>
 					<div class="col-sm-10">
