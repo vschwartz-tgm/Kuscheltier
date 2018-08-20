@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+msgid "Emergency Eemergency Emergency"
+msgstr "Notfall Notfall Notfall"
+
+msgid "Choose your language, press the right arm for german and the left arm for english"
+msgstr "Wählen sie ihre sprache aus, drücken sie den Rechten Arm für Deutsch und den Linken Arm für English"
+
+msgid "If you want to play Simon Says, press the right arm"
+msgstr "Wollen sie Simon Sagt spielen dann drücken sie den Rechten Arm"
+
+msgid "If you want to listen to a book, press the left arm"
+msgstr "Wollen sie Hörbuecher hören dann drücken sie den linken Arm"
+
+msgid "If you want to turn me off, press end button"
+msgstr "Wollen sie Teddy beenden dann drücken sie auf beenden"
+
+msgid "You choose to play Simon Says"
+msgstr "Sie haben Simon Sagt ausgewaehlt"
+
+msgid "You choose to listen to books"
+msgstr "Sie haben Bücher lesen ausgewählt"
+
+msgid "Teddy is shutting down"
+msgstr "Teddy wurde beendet"
+
+msgid "The Rules of Simon Says are as follows"
+msgstr "Die Regeln von Simon Sagt sind folgende"
+
+msgid "When i say, Simon Says, then you must follow my orders"
+msgstr "Wenn ich sage Simon Sagt, dann müssen sie machen was ich ihnen gesagt habe"
+
+msgid "When i don't say Simon Says, then you must do nothing"
+msgstr "Wenn ich nicht Simon Sagt sage, dann müssen sie nichts machen"
+
+msgid "Simon Says"
+msgstr "Simon sagt"
+
+msgid "press my right arm"
+msgstr "drücke meinen rechten Arm"
+
+msgid "press my left arm"
+msgstr "drucke minen linken Arm"
+
+msgid "press my right foot"
+msgstr "drücke meinen rechten Fuß"
+
+msgid "press my left foot"
+msgstr "drücke meinen linken Fuß"
+
+msgid "Right"
+msgstr "Richtig"
+
+msgid "Wrong"
+msgstr "Falsch"
+
+msgid "Simon Says was closed"
+msgstr "Simon Sagt wurde beendet"
+
+msgid "you have"
+msgstr "Sie haben"
+
+msgid "points"
+msgstr "Punkte"
+
+msgid "new highscore"
+msgstr "neuer Höchststand"
+
+msgid "Highscore"
+msgstr "Höchststand"
+
+msgid "Press my left arm to select another"
+msgstr "Drücken sie meinen linken Arm um etwas anderes auszuwählen"
+
+msgid "Press my right arm to select this"
+msgstr "Drücken sie meinen rechten Arm um dieses auszuwählen"
+
+msgid "was selected"
+msgstr "wurde ausgewählt"
+
+msgid "Book reading was closed"
+msgstr "Bücher lesen wurde beendet"
+
+msgid "Choose a book"
+msgstr "Wählen sie ein Buch aus"
+
+msgid "Choose a author"
+msgstr "Wählen sie einen Autor aus"
+
+msgid "Press my right arm to start from the Bookmark"
+msgstr "Drücken sie meinen rechten Arm um vom Lesezeichen aus zu starten"
+
+msgid "Press my left arm to start from the beginning"
+msgstr "Drücken sie meinen linken Arm um vom Anfang aus zu starten"
+
+msgid "Press my right arm to pause reading"
+msgstr "Drücken sie meinen rechten Arm um das Vorlesen zu pausieren"
+
+msgid "Press end to stop reading"
+msgstr "Drücken sie meinen linken Arm um das Vorlesen zu beended"
+
+msgid "Reading paused"
+msgstr "Vorlesen pausiert"
+
+msgid "Press my right arm to resume reading"
+msgstr "Drücken sie meinen rechten Arm um das Vorlesen fortzusetzen"
+
+msgid "Continuing reading"
+msgstr "Weiter Vorlesen"
+
+msgid "Battery is empty"
+msgstr "Batterie ist leer"
+
+msgid "Termin"
+msgstr "Termin"
+
+msgid "at"
+msgstr "um"
+
+msgid "hours"
+msgstr "Uhr"
+
+msgid "minutes"
+msgstr "Minuten"
+
+msgid "description"
+msgstr "Beschreibung"
+
+msgid "location"
+msgstr "Ort"
+
+msgid "hint"
+msgstr "Hinweis"
