@@ -49,7 +49,7 @@
         $anz = $_POST['anzahl'];
 	    $zeit = $_POST['zeit'];
 
-		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so, $anz, $zeit);
+		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so,$anz,$zeit);
 		$p->add();
 
 	}

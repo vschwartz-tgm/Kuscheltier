@@ -5,10 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homepage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/pillenwecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/pillenwecker.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,33 +16,36 @@
     <session id="-1660860667">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.17" value="2" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="4148" />
+          <entry key="php" value="4732" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="13" />
-          <entry key="PHP" value="4135" />
+          <entry key="PHP" value="4719" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="12" />
+          <entry key="php" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="12" />
+          <entry key="PHP" value="15" />
         </counts>
       </usages-collector>
     </session>
@@ -56,8 +55,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3208">
-              <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+            <state relative-caret-position="328">
+              <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1139">
+              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Homepage/neuerPillenwecker.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -83,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="52" column="61" lean-forward="true" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+            <state relative-caret-position="884">
+              <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -92,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+            <state relative-caret-position="493">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -143,10 +160,10 @@
         <option value="$PROJECT_DIR$/Homepage/notfallsignal_login.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" />
-        <option value="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" />
         <option value="$PROJECT_DIR$/Homepage/pillenwecker.php" />
-        <option value="$PROJECT_DIR$/Homepage/functions.php" />
         <option value="$PROJECT_DIR$/Homepage/terminplanung.php" />
+        <option value="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" />
+        <option value="$PROJECT_DIR$/Homepage/functions.php" />
       </list>
     </option>
   </component>
@@ -206,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Unknown.KuscheltierController823412308">
+  <component name="RunManager" selected="Unknown.KuscheltierController1328562600">
     <configuration name="KuscheltierController" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -275,17 +292,22 @@
       <workItem from="1533797533854" duration="11954000" />
       <workItem from="1533888028629" duration="8848000" />
       <workItem from="1534406007370" duration="1374000" />
+      <workItem from="1534750760375" duration="23000" />
+      <workItem from="1534750823459" duration="11299000" />
+      <workItem from="1534834819971" duration="743000" />
+      <workItem from="1534843614015" duration="813000" />
+      <workItem from="1534923742243" duration="677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54959000" />
+    <option name="totallyTimeSpent" value="68514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27206478" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27206478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,35 +337,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eventMockup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/event.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimonSays.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KuscheltierController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DbConnection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-888" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/eventMockup.py" />
+    <entry file="file://$PROJECT_DIR$/event.py" />
+    <entry file="file://$PROJECT_DIR$/SimonSays.py" />
+    <entry file="file://$PROJECT_DIR$/KuscheltierController.py" />
+    <entry file="file://$PROJECT_DIR$/DbConnection.py" />
     <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -353,22 +351,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="1139">
           <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/neuerPillenwecker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="51" column="76" selection-start-line="51" selection-start-column="76" selection-end-line="51" selection-end-column="76" />
+        <state relative-caret-position="867">
+          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -386,6 +377,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/pillenwecker.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -393,24 +398,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="52" column="61" lean-forward="true" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="155">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3208">
-          <caret line="80" column="52" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="52" />
+        <state relative-caret-position="328">
+          <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
         </state>
       </provider>
     </entry>

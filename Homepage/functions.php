@@ -32,13 +32,10 @@ class Pillenwecker{
         $fehler = false;
 
         if($fehler == false){
-            
-            $insert = "INSERT INTO pillen VALUES('$this->name','$this->montag','$this->dienstag','$this->mittwoch','$this->donnerstag','$this->freitag','$this->samstag','$this->sonntag','$this->anzahl','$this->zeit');";
-            pg_query($dbconn, $insert);
-            
-            
-            
-        
+            pg_prepare($dbconn,"addPille","INSERT INTO pillen VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)");
+            $insertValue = array($this->name,$this->montag,$this->dienstag,$this->mittwoch,$this->donnerstag,$this->freitag,$this->samstag,$this->sonntag,$this->anzahl,$this->zeit);
+            pg_execute($dbconn,"addPille", $insertValue);
+            //SELECT relfilenode FROM pg_class WHERE  relname = 'pg_prepared_statements'; should list all prep statements
         }
     }
     public function del(){
@@ -115,9 +112,9 @@ class Termine{
 
     public function add(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        pg_prepare($dbconn,"myquery","INSERT INTO termine VALUES($1,$2,$3,$4,$5,$6)");
+        pg_prepare($dbconn,"addTermin","INSERT INTO termine VALUES($1,$2,$3,$4,$5,$6)");
         $insertValue = array($this->name,$this->datum,$this->uhrzeit,$this->beschreibung,$this->ort,$this->hinweis);
-        pg_execute($dbconn,"myquery", $insertValue);
+        pg_execute($dbconn,"addTermin", $insertValue);
     }
 
 }
@@ -176,7 +173,7 @@ class Kuscheltiernutzer{
 
     function getTel(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $ntel = "SELECT tel FROM notfallkontakt WHERE name is not null;";
+        $ntel = "SELECT tel FROM kuscheltiernutzer WHERE name is not null;";
         $sql = pg_query($dbconn, $ntel);
         $ntel = pg_fetch_row($sql);
 
@@ -187,15 +184,12 @@ class Kuscheltiernutzer{
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
 
         if(func_num_args() == 3){
-            $update = "UPDATE kuscheltiernutzer SET name = '".func_get_arg(0)."', adresse = '".func_get_arg(1)."', tel = '".func_get_arg(2)."';";
-        }/*
-        elseif (strpbrk(func_get_arg(0), '1234567890') !== FALSE){
-            $update = "UPDATE notfallkontakt SET tel = '".func_get_arg(0)."';";
-        }else{
-            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."';";
-        }*/
-
-        pg_query($dbconn, $update);
+            $del = "DELETE FROM kuscheltiernutzer WHERE name is not null;";
+            pg_query($dbconn, $del);
+            pg_prepare($dbconn,"updateNutzer","INSERT INTO kuscheltiernutzer VALUES($1,$2,$3)");
+            $insertValue = array(func_get_arg(0), func_get_arg(1),func_get_arg(2));
+            pg_execute($dbconn,"updateNutzer", $insertValue);
+        }
     }
 
     function show(){
@@ -260,15 +254,12 @@ class Notfallkontakt{
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
 
         if(func_num_args() == 2){
-            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."', tel = '".func_get_arg(1)."';";
-        }/*
-        elseif (strpbrk(func_get_arg(0), '1234567890') !== FALSE){
-            $update = "UPDATE notfallkontakt SET tel = '".func_get_arg(0)."';";
-        }else{
-            $update = "UPDATE notfallkontakt SET name = '".func_get_arg(0)."';";
-        }*/
-
-        pg_query($dbconn, $update);
+            $del = "DELETE FROM notfallkontakt WHERE name is not null;";
+            pg_query($dbconn, $del);
+            pg_prepare($dbconn,"updateKontakt","INSERT INTO notfallkontakt VALUES($1,$2)");
+            $insertValue = array(func_get_arg(0), func_get_arg(1));
+            pg_execute($dbconn,"updateKontakt", $insertValue);
+        }
     }
 
 }
