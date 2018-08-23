@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49666a56-0463-4be5-958f-1c70da4851ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Homepage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/neuesBuch.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuesBuch.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="410">
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+            <state relative-caret-position="410">
+              <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Homepage/buechervorlesen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="308">
+              <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -146,7 +146,6 @@
         <option value="$PROJECT_DIR$/KuscheltierController.py" />
         <option value="$PROJECT_DIR$/SimonSays.py" />
         <option value="$PROJECT_DIR$/Homepage/buechervorlesen.php" />
-        <option value="$PROJECT_DIR$/Homepage/neuesBuch.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal_login.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal.php" />
         <option value="$PROJECT_DIR$/Homepage/pillenwecker.php" />
@@ -160,6 +159,7 @@
         <option value="$PROJECT_DIR$/Homepage/deleteBuch.php" />
         <option value="$PROJECT_DIR$/Homepage/addBuch.php" />
         <option value="$PROJECT_DIR$/Homepage/functions.php" />
+        <option value="$PROJECT_DIR$/Homepage/neuesBuch.php" />
       </list>
     </option>
   </component>
@@ -294,12 +294,12 @@
       <workItem from="1534843614015" duration="813000" />
       <workItem from="1534923742243" duration="4073000" />
       <workItem from="1534936931050" duration="923000" />
-      <workItem from="1535007398890" duration="3972000" />
+      <workItem from="1535007398890" duration="4375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76805000" />
+    <option name="totallyTimeSpent" value="77208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
@@ -403,20 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/buechervorlesen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/deletePille.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -442,6 +428,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
           <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/buechervorlesen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/neuesBuch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
         </state>
       </provider>
     </entry>
