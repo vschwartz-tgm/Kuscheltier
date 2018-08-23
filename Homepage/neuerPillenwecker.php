@@ -52,6 +52,8 @@
 		$p = new Pillenwecker($name,$m,$d,$mi,$do,$fr,$sa,$so,$anz,$zeit);
 		$p->add();
 
+        header('location:pillenwecker.php');
+
 	}
 ?>
 <html>
@@ -125,7 +127,7 @@
 				</div>
 				<div class="clearfix">
 					<button type="button" class="cancelbtn rounded" onclick ="window.location = 'pillenwecker.php'"><h5>Abbrechen</h5></button>
-					<button type="submit" name="submit" id="submit" class="addbtn rounded" onclick ="window.location = 'pillenwecker.php'"><h5>Hinzufügen</h5></button>
+					<button type="submit" name="submit" id="submit" class="addbtn rounded"><h5>Hinzufügen</h5></button>
 				</div>
 			</form>
 		</div>

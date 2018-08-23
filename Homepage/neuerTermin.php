@@ -12,6 +12,7 @@
 		$t = new Termine($name, $datum, $uhrzeit, $beschreibung, $ort, $hinweis);
 		$t->add();
 
+        header('location:terminplanung.php');
 	}
 ?>
 <html>
@@ -68,7 +69,7 @@
 				</div>
 				<div class="clearfix">
 					<button type="button" class="cancelbtn rounded" onclick ="window.location = 'terminplanung.php'"><h5>Abbrechen</h5></button>
-					<button type="submit" name="submit" id="submit" class="addbtn rounded" onclick ="window.location = 'terminplanung.php'"><h5>Hinzufügen</h5></button>
+					<button type="submit" name="submit" id="submit" class="addbtn rounded"><h5>Hinzufügen</h5></button>
 				</div>
 			</form>
 		</div>

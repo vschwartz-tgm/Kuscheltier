@@ -278,14 +278,18 @@ class Buch{
         $buchArr = pg_fetch_all($sql);
 
         foreach($buchArr as $buch){
+            $name = $buch['name'];
+            $author = $buch['author'];
+            echo '<form action="deleteBuch.php" method="get">';
             echo "<tr>
 						<td scope='row'><h3>".$buch['name']."</h3></td>
 						<td><h3>".$buch['author']."</h3></td>
 						<td><h3>".$buch['genre']."</h3></td>
 						<td>
-							<button type='button' class='btn btn-outline-danger'>Löschen</button>
+							<a href='deleteBuch.php?id=$name&id2=$author' class='btn btn-outline-danger'>Löschen</a>
 						</td>
 					</tr>";
+            echo '</form>';
         }
     }
 
@@ -296,22 +300,24 @@ class Buch{
         $buchArr = pg_fetch_all($sql);
 
         foreach($buchArr as $buch){
+            $name = $buch['name'];
+            $author = $buch['author'];
+            echo '<form action="addBuch.php" method="get">';
             echo "<tr>
 						<td scope='row'><h3>".$buch['name']."</h3></td>
 						<td><h3>".$buch['author']."</h3></td>
 						<td><h3>".$buch['genre']."</h3></td>
 						<td>
-						    <form action='' method='post'>
-							    <input type='submit' class='btn btn-outline-success' name='add' value='Hinzufügen' />
-						    </form>
+							<a href='addBuch.php?id=$name&id2=$author' class='btn btn-outline-success'>Hinzufügen</a>
 						</td>
 					</tr>";
+            echo '</form>';
         }
     }
 
     public function setSelected($name, $author){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $set = "UPDATE buch SET ausgewählt = true WHERE name = '$name' and author = '$author';";
+        $set = "UPDATE buch SET ausgewaehlt = true WHERE name = '$name' and author = '$author';";
         pg_query($dbconn, $set);
     }    
 
