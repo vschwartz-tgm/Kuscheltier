@@ -37,15 +37,6 @@ class Pillenwecker{
             pg_execute($dbconn, "addPille", $insertValue);
         }
     }
-    public function del($name){
-        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $fehler = false;
-
-        if($fehler == false){
-            $del = "DELETE FROM pillen WHERE name = '$name';";
-            pg_query($dbconn, $del);
-        } 
-    }     
 }
 
 class showPillen{
@@ -122,12 +113,6 @@ class Termine{
 
 class ShowTermine{
     function __construct(){}
-
-    public function del($name){
-        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $del = "DELETE FROM termine WHERE name = '$name';";
-        pg_query($dbconn, $del);
-    }
 
     public function show(){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
@@ -314,13 +299,6 @@ class Buch{
             echo '</form>';
         }
     }
-
-    public function setSelected($name, $author){
-        $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $set = "UPDATE buch SET ausgewaehlt = true WHERE name = '$name' and author = '$author';";
-        pg_query($dbconn, $set);
-    }    
-
 }
 
 ?>
