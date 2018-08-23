@@ -77,7 +77,30 @@ class showPillen{
         for ($j = 0; $j < $i; $j++){
             $fieldname = pg_field_name($sql, $j);
             if($row[$j] == 't'){
-                $string .= $fieldname.",";
+                switch($fieldname){
+                    case 'mo':
+                        $fieldname = 'Mo';
+                        break;
+                    case 'di':
+                        $fieldname = 'Di';
+                        break;
+                    case 'mi':
+                        $fieldname = 'Mi';
+                        break;
+                    case 'don':
+                        $fieldname = 'Do';
+                        break;
+                    case 'fr':
+                        $fieldname = 'Fr';
+                        break;
+                    case 'sa':
+                        $fieldname = 'Sa';
+                        break;
+                    case 'so':
+                        $fieldname = 'So';
+                        break;
+                }
+                $string .= $fieldname.", ";
             }
         }
 

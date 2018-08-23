@@ -29,13 +29,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="5220" />
+          <entry key="php" value="5318" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="15" />
-          <entry key="PHP" value="5205" />
+          <entry key="PHP" value="5303" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="410">
+              <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -294,12 +294,12 @@
       <workItem from="1534843614015" duration="813000" />
       <workItem from="1534923742243" duration="4073000" />
       <workItem from="1534936931050" duration="923000" />
-      <workItem from="1535007398890" duration="2619000" />
+      <workItem from="1535007398890" duration="3972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75452000" />
+    <option name="totallyTimeSpent" value="76805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
@@ -440,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="410">
+          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
         </state>
       </provider>
     </entry>
