@@ -31,19 +31,18 @@ class Pillenwecker{
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
         $fehler = false;
 
-        if($fehler == false){
-            pg_prepare($dbconn,"addPille","INSERT INTO pillen VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)");
-            $insertValue = array($this->name,$this->montag,$this->dienstag,$this->mittwoch,$this->donnerstag,$this->freitag,$this->samstag,$this->sonntag,$this->anzahl,$this->zeit);
-            pg_execute($dbconn,"addPille", $insertValue);
-            //SELECT relfilenode FROM pg_class WHERE  relname = 'pg_prepared_statements'; should list all prep statements
+        if($fehler == false) {
+            pg_prepare($dbconn, "addPille", "INSERT INTO pillen VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)");
+            $insertValue = array($this->name, $this->montag, $this->dienstag, $this->mittwoch, $this->donnerstag, $this->freitag, $this->samstag, $this->sonntag, $this->anzahl, $this->zeit);
+            pg_execute($dbconn, "addPille", $insertValue);
         }
     }
-    public function del(){
+    public function del($name){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
         $fehler = false;
 
         if($fehler == false){
-            $del = "DELETE FROM pillen WHERE name = '$this->name';";
+            $del = "DELETE FROM pillen WHERE name = '$name';";
             pg_query($dbconn, $del);
         } 
     }     
@@ -60,22 +59,24 @@ class showPillen{
 
 
         foreach($pillenArr as $pille){ //zwischen zeit und anzahl die Tage ausgeben
-            $tage = $this->showDays($pille['name']);
+            $name = $pille['name'];
+            echo '<form action="deletePille.php" method="get">';
             echo   "<tr>
                         <td scope='row'><h3>".$pille['name']."</h3></td>
                         <td><h3>".$pille['zeit']."</h3></td>
                         <td><h3>".$this->showDays($pille['name'])."</h3></td>
                         <td><h3>".$pille['anzahl']."</h3></td>
                         <td>
-                            <button type='button' class='btn btn-outline-danger' >Löschen</button>
+                            <a href='deletePille.php?id=$name' class='btn btn-outline-danger'>Löschen</a>
                         </td>
                     </tr>";
+            echo '</form>';
         }
     }
 
     public function showDays($name){
         $dbconn = pg_connect("host=localhost port=5432 dbname=teddy user=vinc password=vinc");
-        $days = "SELECT mo,di,mi,donnerstag,fr,sa,so FROM pillen WHERE name = '$name';";
+        $days = "SELECT mo,di,mi,don,fr,sa,so FROM pillen WHERE name = '$name';";
         $sql = pg_query($dbconn, $days);
         $i = pg_num_fields($sql);
         $row = pg_fetch_row($sql);
@@ -135,6 +136,8 @@ class ShowTermine{
         $termineArr = pg_fetch_all($sql);
 
         foreach($termineArr as $termin){
+            $name = $termin['name'];
+            echo '<form action="deleteTermin.php" method="get">';
             echo   "<tr>
                         <td scope='row'><h3>".$termin['name']."</h3></td>
                         <td><h3>".$termin['datum']."</h3></td>
@@ -143,9 +146,10 @@ class ShowTermine{
                         <td><h3>".$termin['ort']."</h3></td>
                         <td><h3>".$termin['hinweis']."</h3></td>
                         <td>
-                            <button type='button' class='btn btn-outline-danger' >Löschen</button>
+                            <a href='deleteTermin.php?id=$name' class='btn btn-outline-danger'>Löschen</a>
                         </td>
                     </tr>";
+            echo '</form>';
         }
     }
 }

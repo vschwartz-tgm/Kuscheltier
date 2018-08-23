@@ -52,9 +52,9 @@
     </nav>
 		<div class="container">
             <button type="button" class="btn btn-outline-dark btn-lg" style="float: left;" onclick ="window.location = 'notfallsignal.php'">Zurück</button>
-            <div class="row">
-                <form action="" method="post">
-                    <div class="col-sm">
+            <form action="" method="post">
+                <div class="row">
+                    <div class="col-sm-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4>Daten des Kuscheltiernutzers</h4>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4>Daten des Notfallkontaktes</h4>

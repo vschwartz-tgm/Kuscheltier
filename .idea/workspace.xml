@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49666a56-0463-4be5-958f-1c70da4851ca" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Homepage/deletePille.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homepage/deleteTermin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homepage/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,36 +19,38 @@
     <session id="-1660860667">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="4732" />
+          <entry key="php" value="4996" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="13" />
-          <entry key="PHP" value="4719" />
+          <entry key="HTML" value="14" />
+          <entry key="PHP" value="4982" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="15" />
+          <entry key="php" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="15" />
+          <entry key="PHP" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -55,17 +60,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
+            <state relative-caret-position="289">
+              <caret line="143" column="64" lean-forward="true" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
+        <entry file="file://$PROJECT_DIR$/Homepage/deleteTermin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+            <state relative-caret-position="153">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Homepage/deletePille.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -98,28 +112,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+        <entry file="file://$PROJECT_DIR$/Homepage/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Homepage/pillenwecker.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="850">
+              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -159,10 +155,13 @@
         <option value="$PROJECT_DIR$/Homepage/neuerTermin.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal_login.php" />
         <option value="$PROJECT_DIR$/Homepage/notfallsignal.php" />
-        <option value="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" />
         <option value="$PROJECT_DIR$/Homepage/pillenwecker.php" />
         <option value="$PROJECT_DIR$/Homepage/terminplanung.php" />
         <option value="$PROJECT_DIR$/Homepage/neuerPillenwecker.php" />
+        <option value="$PROJECT_DIR$/Homepage/test.php" />
+        <option value="$PROJECT_DIR$/Homepage/notfallsignal_ändern.php" />
+        <option value="$PROJECT_DIR$/Homepage/deletePille.php" />
+        <option value="$PROJECT_DIR$/Homepage/deleteTermin.php" />
         <option value="$PROJECT_DIR$/Homepage/functions.php" />
       </list>
     </option>
@@ -173,7 +172,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
@@ -223,7 +222,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Unknown.KuscheltierController1328562600">
+  <component name="RunManager" selected="Unknown.KuscheltierController93571150">
     <configuration name="KuscheltierController" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,18 +295,20 @@
       <workItem from="1534750823459" duration="11299000" />
       <workItem from="1534834819971" duration="743000" />
       <workItem from="1534843614015" duration="813000" />
-      <workItem from="1534923742243" duration="677000" />
+      <workItem from="1534923742243" duration="4073000" />
+      <workItem from="1534936931050" duration="923000" />
+      <workItem from="1535007398890" duration="843000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68514000" />
+    <option name="totallyTimeSpent" value="73676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1293" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27206478" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19757085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -349,10 +350,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal_ändern.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+        <state relative-caret-position="1326">
+          <caret line="78" column="34" lean-forward="true" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Homepage/pillenwecker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -377,38 +406,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/terminplanung.php">
+    <entry file="file://$PROJECT_DIR$/Homepage/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="61" selection-start-line="52" selection-start-column="61" selection-end-line="52" selection-end-column="61" />
+        <state relative-caret-position="850">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/neuerTermin.php">
+    <entry file="file://$PROJECT_DIR$/Homepage/deletePille.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/pillenwecker.php">
+    <entry file="file://$PROJECT_DIR$/Homepage/deleteTermin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Homepage/notfallsignal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="153">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Homepage/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="188" column="92" selection-start-line="188" selection-start-column="92" selection-end-line="188" selection-end-column="92" />
+        <state relative-caret-position="289">
+          <caret line="143" column="64" lean-forward="true" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
         </state>
       </provider>
     </entry>
