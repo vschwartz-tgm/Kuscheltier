@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
@@ -40,6 +40,16 @@ class LeseBuch(object):
 		# This Function is called when a user wants to have a book read to him or her.
 		# It runs the audio file of the book, listens for interrupts and allows the usersto start from exiting bookmarks instead of the beginning of the book.
 		#
+		# :param dev: the device that the input is coming from
+		# :param name: name of the current book
+		# :param author: author of the current book
+		# :param genre: genre of the current book
+		# :param path: path of the current book
+		# :param ausgewaehlt:
+		# :param pausiert: if the current book has been paused
+		# :param vorgelesen: timestamp of the bookmark
+		# :param debug: If debug messages are supposed to be printed
+		#
 		from teddy import getDevice, coutput, getButton, Notfall
 		#
 		self.debug=debug
@@ -59,7 +69,7 @@ class LeseBuch(object):
 		self.path=path
 		self.ausgewaehlt=ausgewaehlt
 		self.pausiert=pausiert
-		self.vorgelesen=vorgelesen		
+		self.vorgelesen=vorgelesen
 		if self.debug:
 			print("### Vorlesen %s %s" % (self.author,self.name))
 
@@ -67,7 +77,7 @@ class LeseBuch(object):
 			if self.author is None or self.name is None:
 				if self.debug:
 					print("### Sorry, weder author und name noch pfad angegeben")
-				return 
+				return
 			mp3=teddy_books+self.author.replace(" ","_").replace("ü","ue").replace("ß","ss").replace("ö","oe").replace("ä","ae")+"/"+self.name.replace(" ","_").replace("ü","ue").replace("ß","ss").replace("ö","oe").replace("ä","ae")+".mp3"
 		else:
 			mp3=self.path
@@ -114,7 +124,7 @@ class LeseBuch(object):
 						self.vorgelesen=0
 
 			coutput("Press my right arm to pause reading")
-			coutput("Press end to stop reading")
+			coutput("Press the end button to stop reading")
 
 			start = int(time.time())
 			print(">>>>>>>> Vorlesen %s at %d from %d" % (mp3,start,self.vorgelesen))
@@ -155,7 +165,7 @@ class LeseBuch(object):
 						if not Paused:
 							coutput("Reading paused")
 							coutput("Press my right arm to resume reading")
-							coutput("Press end to stop reading")
+							coutput("Press the end button to stop reading")
 							now = int(time.time())
 							lesezeit=now-start
 							self.vorgelesen=self.vorgelesen+lesezeit
@@ -168,7 +178,7 @@ class LeseBuch(object):
 						else: # Paused
 							coutput("Continuing reading")
 							coutput("Press my right arm to pause reading")
-							coutput("Press end to stop reading")
+							coutput("Press the end button to stop reading")
 							Paused=False
 							self.vorgelesen=self.updateBuch(self.name, self.author, self.genre, mp3, self.ausgewaehlt, Paused, 0)
 							start = int(time.time())
@@ -185,18 +195,27 @@ class LeseBuch(object):
 #		coutput("Hörbuecher hören wurde beendet")
 
 	def updateBuch(self, name, author, genre, path, ausgewaehlt, pausiert, vorgelesen, debug=False):
-#
-#		insert a new gelesen value into the Buecher table
-#
-# 		Table Buch(
-#     		name varchar(255) PRIMARY KEY,
-#        	author varchar(255),
-#        	genre varchar(20),
-#        	path varchar(255)
-#        	ausgewaehlt bool,
-#        	pausiert bool,
-#        	vorgelesen integer)
-#
+		#
+		# insert a new gelesen value into the Buecher table
+		#
+		# :param name: name of the current book
+		# :param author: author of the current book
+		# :param genre: genre of the current book
+		# :param path: path of the current book
+		# :param ausgewaehlt:
+		# :param pausiert: if the current book has been paused
+		# :param vorgelesen: timestamp of the bookmark
+		# :param debug: If debug messages are supposed to be printed
+		#
+		# Table Buch(
+		# name varchar(255) PRIMARY KEY,
+		# author varchar(255),
+		# genre varchar(20),
+		# path varchar(255)
+		# ausgewaehlt bool,
+		# pausiert bool,
+		# vorgelesen integer)
+		#
 		nam=name.replace("_"," ")
 		aut=author.replace("_"," ")
 		if genre is not None:

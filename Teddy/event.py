@@ -1,4 +1,4 @@
-#!/usr/bin/python3.6
+#!/usr/bin/python3
 from evdev import InputDevice, categorize, ecodes
 from select import select
 #
@@ -17,7 +17,12 @@ while line:
 		line=inputs.readline()
 		sp=[]
 		sp=line.split()
+		print("----------")
+		print(sp)
+		print("----------")
 		dv=sp[1].replace("Handlers=","")
+		if dv.startswith("js"):
+			dv=sp[2]
 		line=inputs.readline()
 	line=inputs.readline()
 

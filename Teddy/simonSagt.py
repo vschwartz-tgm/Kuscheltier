@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
@@ -28,9 +28,12 @@ LINE="--------------------------------------------------------------------"
 import gettext
 
 class SimonSagt(object):
-	def runSpiel(self, dev=None, task=None, debug=False):
+	def runSpiel(self, dev=None, debug=False):
 		#
 		# This function allows the user to play Simon Says.
+		#
+		# :param dev: the device that the input is coming from
+		# :param debug: If debug messages are supposed to be printed
 		#
 		from teddy import getDevice, coutput, getButton, Notfall
 		#
@@ -38,7 +41,6 @@ class SimonSagt(object):
 			self.dev=getDevice(True)
 		else:
 			self.dev=dev
-		self.task=task
 		self.debug=debug
 		if self.debug:
 			print("### Simon Sagt mit debug output ....")
@@ -184,7 +186,7 @@ class SimonSagt(object):
 		coutput(str(self.punkte))
 		coutput("points")
 
-		if self.hoechststand < self.punkte:
+		if self.hoechststand < int(self.punkte):
 			coutput("new highscore")
 		else:
 			coutput("Highscore")
@@ -196,6 +198,10 @@ class SimonSagt(object):
 		#
 		# This Function writes a new Highscore into the DB.
 		#
+		# :param name: the name of the current game
+		# :param punkte: the current number of points
+		# :param debug: If debug messages are supposed to be printed
+		#
 
 		# insert a new gelesen value into the Spiele table
 		#
@@ -203,10 +209,10 @@ class SimonSagt(object):
 		# name varchar(255) PRIMARY KEY,
 		# punkte integer)
 		#
-		
+
 		self.debug=debug
 		self.name=name.replace("_"," ")
-		self.punkte=str(punkte)
+		self.punkte=punkte
 		self.hoechststand=0
 
 		select= """SELECT * FROM Spiele WHERE name = %s;"""
@@ -225,8 +231,8 @@ class SimonSagt(object):
 				if self.debug:
 					print("### hoechststand %d Punkte %d" % (self.hoechststand, self.punkte))
 				if self.punkte > 0 and self.hoechststand < self.punkte:
-					print(">>>>>>>> updating name %s hoechststand %d to %s" % (self.name,self.hoechststand, self.punkte))
-					cur.execute(update, (self.punkte,self.name))
+					print(">>>>>>>> updating name %s hoechststand %d to %s" % (self.name,self.hoechststand, self.strPunkte))
+					cur.execute(update, (self.str(punkte),self.name))
 			else:
 				# execute the INSERT statement
 				cur.execute(sql, (self.name,self.punkte))

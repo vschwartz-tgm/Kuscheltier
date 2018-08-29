@@ -1,12 +1,13 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
-# @version: 20180608
+# @version: 20182008
 #
 # @description: Teddy - the interactive Hedgehog teddy bear client
 #
-teddy_version="0.17"
+teddy_version="0.19"
 #
 from evdev import InputDevice, categorize, ecodes
 from select import select
@@ -16,19 +17,16 @@ import signal
 import random
 import pygame
 import time
-import threading
-import psycopg2
-import threading
 #
 import os
 #
 from espeak import espeak, core
 from datetime import datetime
 #
-import simonSagt
-import buecherLesen
-import power
-import termin
+from simonSagt import SimonSagt as SimonSagt
+from buecherLesen import BuecherLesen as BuecherLesen
+from power import Power as Power
+from termin import Termin as Termin
 #
 RECHTER_ARM=1
 LINKER_ARM=2
@@ -46,30 +44,68 @@ word_gap=10
 capitals=1
 line_length=1
 pitch=50
-speed=175
+speed=100
 spell_punctuation=[]
 #
 import gettext
 global teddy_language
 teddy_language = "de"
 
-def do_every (interval, worker_func, debug=False, iterations = 0):
-	#
-	# A Function that repeats a given Function every interval via iteration
-	#
-	# :param interval: The number of milliseconds between iterations
-	# :param worker_func: The Function do_every is supposed to repeat
-	# :param debugging: If debug messages are supposed to be printed
-	# :param iterations: Limiting the number of iterations
-	#
-	if debug:
-		print("### with debugging ...")
-	if iterations != 1:
-		threading.Timer (
-			interval,
-			do_every, [interval, worker_func, debug, 0 if iterations == 0 else iterations-1]
-		).start ()
-	worker_func(debug=debug)
+from threading import Timer
+from functools import partial
+
+class IntervalTermin(object):
+        def __init__(self, interval, function, args=[], kwargs={}):
+            self.interval = interval
+            self.function = partial(function, *args, **kwargs)
+            self.running  = False
+            self._timer   = None
+
+        def __call__(self):
+            self.running = False  # mark not running
+            self.start()          # reset the timer for the next go
+            self.function()       # call the partial function
+
+        def start(self):
+            if self.running:
+                # Don't start if we're running!
+                return
+            # Create the timer object, start and set state.
+            self._timer = Timer(self.interval, self)
+            self._timer.start()
+            self.running = True
+
+        def stop(self):
+            if self._timer:
+                self._timer.cancel()
+                self.running = False
+                self._timer  = None
+
+class IntervalPower(object):
+        def __init__(self, interval, function, args=[], kwargs={}):
+            self.interval = interval
+            self.function = partial(function, *args, **kwargs)
+            self.running  = False
+            self._timer   = None
+
+        def __call__(self):
+            self.running = False  # mark not running
+            self.start()          # reset the timer for the next go
+            self.function()       # call the partial function
+        def start(self):
+            if self.running:
+                # Don't start if we're running!
+                return
+            # Create the timer object, start and set state.
+            self._timer = Timer(self.interval, self)
+            self._timer.start()
+            self.running = True
+
+        def stop(self):
+            if self._timer:
+                self._timer.cancel()
+                self.running = False
+                self._timer  = None
 
 def wait4pygame():
 	#
@@ -79,6 +115,11 @@ def wait4pygame():
 		pygame.time.Clock().tick(10)
 
 def wait4espeak(r):
+	#
+	# A Function that puts the programm to sleep while espeak is busy
+	#
+	# :param r: the synthesized text
+	#
 	done_synth = [False]
 	def cb(event, pos, length):
 		if event == espeak.core.event_MSG_TERMINATED:
@@ -88,6 +129,12 @@ def wait4espeak(r):
 		time.sleep(0.10)
 
 def coutput(text, debug=False):
+	#
+	# This function turn text into synthesized speech
+	#
+	# :param text: The text that is to be turned into speech
+	# :param debug: If debug messages are supposed to be printed
+	#
 	print(">>>>>>>> %s" % text)
 	global teddy_language
 	langs = []
@@ -100,12 +147,18 @@ def coutput(text, debug=False):
 	wait4espeak(r)
 
 def getDevice(debug=False):
-	# suche nach Joystick device ...
+	#
+	# A Function to detect suitable input devices
+	#
+	# :param debug: If debug messages are supposed to be printed
+	#
+	# :return: the device
+	#
 	inputs=open("/proc/bus/input/devices","r")
 	line=inputs.readline()
 	dv="none"
 	while line:
-		if line.find("Joystick") is not -1 or line.find("MOSIC      SPEED-LINK Competition Pro") is not -1: 
+		if line.find("Joystick") is not -1 or line.find("MOSIC      SPEED-LINK Competition Pro") is not -1:
 			line=inputs.readline()
 			line=inputs.readline()
 			line=inputs.readline()
@@ -113,10 +166,11 @@ def getDevice(debug=False):
 			sp=[]
 			sp=line.split()
 			dv=sp[1].replace("Handlers=","")
+			if dv.startswith("js"):
+				dv=sp[2]
 		line=inputs.readline()
 	inputs.close()
 	device="/dev/input/%s" % dv
-
 	if os.path.exists(device):
 		dev = InputDevice(device)
 	else:
@@ -135,7 +189,7 @@ def getDevice(debug=False):
 
 def getButton(dev, timeout=5, debug=True):
 	#
-	# This Function listens for input and returns the a enumeration if the right input happens.
+	# This Function listens for input and returns a enumeration depending on input
 	#
 	# :param dev: The device this function is supposed to listen to
 	# :param timeout: How many seconds to wait for input
@@ -219,14 +273,14 @@ class Teddy(object):
 		#
 		# init pygame for sound
 		#
-		# good sound parameters for raspi 
+		# good sound parameters for raspi
 		# maybe get later from config file or database
 		#
 		frequency=48000
 		size=-16
 		channels=1
 		buffer=1024
-		speed=175
+		speed=100
 		voice='de'
 		#
 		if pygame.mixer.get_init() is None:
@@ -243,8 +297,18 @@ class Teddy(object):
 		#
 		# initializing external classes
 		#
-		self.simon = simonSagt.SimonSagt()
-		self.buecher = buecherLesen.BuecherLesen()
+		self.simon = SimonSagt()
+		self.buecher = BuecherLesen()
+		self.termine = Termin()
+		self.power = Power()
+
+		# call checkPower every 10 seconds, forever
+		pt=IntervalPower(10.0, self.power.checkPower)
+		pt.start()
+		# call checkTermin every 30 seconds, forever
+		rt=IntervalTermin(30.0, self.termine.checkTermin)
+		rt.start()
+
 		#
 		# Choose a language
 		#
@@ -257,11 +321,11 @@ class Teddy(object):
 			teddy_language = "en"
 		#
 		# start task directly is defined for debugging ...
-		# 
+		#
 		if self.task=="simon":
-			self.simon.runSpiel(self.dev, self.task, self.debug)
+			self.simon.runSpiel(self.dev, self.debug)
 		elif self.task=="buecher":
-			self.buecher.runLesen(self.dev, self.task, self.debug)
+			self.buecher.runLesen(self.dev, self.debug)
 		else:
 			self.betterAsk(self.debug)
 
@@ -269,12 +333,14 @@ class Teddy(object):
 		#
 		# This Function presents the user the available functions and allows said user to chose which one he or she wants to use.
 		#
+		# :param debug: If debug messages are supposed to be printed
+		#
 		Laufen=True
 		while Laufen:
 			if self.repeat < 5: # don't ask forever ...
 				coutput("If you want to play Simon Says, press the right arm")
 				coutput("If you want to listen to a book, press the left arm")
-				coutput("If you want to turn me off, press end button")
+				coutput("If you want to turn me off, press the end button")
 				self.repeat+=1
 			pressed=getButton(self.dev, 10, debug)
 			if pressed==RECHTER_ARM:
@@ -282,14 +348,14 @@ class Teddy(object):
 				if debug:
 					print("### Starte Simon Sagt")
 				coutput("You choose to play Simon Says")
-				self.simon.runSpiel(self.dev, self.task, self.debug)
+				self.simon.runSpiel(self.dev, self.debug)
 				self.repeat=0
 			elif pressed==LINKER_ARM:
 				self.repeat=0
 				if debug:
 					print("### Starte Bücher Lesen")
 				coutput("You choose to listen to books")
-				self.buecher.runLesen(self.dev, self.task, self.debug)
+				self.buecher.runLesen(self.dev, self.debug)
 				self.repeat=0
 			elif pressed==NOTFALL:
 				self.repeat=0
@@ -327,14 +393,10 @@ def main():
 	debug=False
 	task="none"
 
-#	t = datetime.now().strftime("%k %M")
-#	espeak.synth("Teddybär gestartet um %s" % t,"de")
-
 	power_check=True
 	termin_check=True
 	argv=sys.argv
 	argc=len(sys.argv)
-#	print(argv[0])
 	for i in range(1,argc):
 		if argv[i].startswith("-d"):
 			debug=True
@@ -361,26 +423,18 @@ def main():
 	#
 	# init pygame for sound
 	#
-	# good sound parameters for raspi 
+	# good sound parameters for raspi
 	# maybe get later from config file or database
 	#
 	frequency=48000
 	size=-16
 	channels=1
 	buffer=1024
-	speed=175
+	speed=100
 	voice='de'
-	#
+
 	if pygame.mixer.get_init() is None:
 		pygame.mixer.init(frequency, size, channels, buffer)
-	#
-	if power_check:
-		# call checkPower every 10 second, forever
-		do_every (10.0, power.Power, debug)
-
-	if termin_check:
-		# call checkTermin every 30 second, forever
-		do_every (30.0, termin.Termin, debug)
 
 	Teddy(dev,task,debug)
 

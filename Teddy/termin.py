@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
@@ -13,22 +13,20 @@ import pygame
 import time
 import threading
 import psycopg2
+import datetime
 #
 import os
 #
-RECHTER_ARM=1
-LINKER_ARM=2
-RECHTES_BEIN=3
-LINKES_BEIN=4
-BEENDEN=5
-NOTFALL=6
-TIMEOUT=7
 LINE="--------------------------------------------------------------------"
 #
 import gettext
 
 class Termin(object):
-	def __init__(self,dev=None,debug=False):
+	def checkTermin(self, dev=None, debug=False):
+		#
+		# This Function reads the Teddy DB.
+		#
+		# :param debug: If debug messages are supposed to be printed
 		#
 		from teddy import getDevice, coutput
 		#
@@ -39,11 +37,9 @@ class Termin(object):
 			self.dev=getDevice(self.debug)
 		else:
 			self.dev=dev
-
-	def checkTermin(self, debug=False):
-		#
-		# This Function reads the Teddy DB.
-		#
+		print("#################################################")
+		print("Teddy TERMIN Thread")
+		print("#################################################")
 		conn = None
 		epoch=0
 		if True:
@@ -72,8 +68,8 @@ class Termin(object):
 			# Pillen
 			#
 			# get weekday:
-			self.datum=datetime.now().replace(hour=0, minute=0, second=0, microsecond=0) 
-			weekday=datetime.today().weekday()
+			self.datum=datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+			weekday=datetime.datetime.today().weekday()
 
 			cur.execute("SELECT * FROM Pillen")
 			row = cur.fetchone()
@@ -135,15 +131,19 @@ class Termin(object):
 		#
 		# This Function  checks if any date is set to the current time.
 		#
+		# :param debug: If debug messages are supposed to be printed
+		#
+		from teddy import coutput
+		#
 		seconds = (self.zeit.hour * 60 + self.zeit.minute) * 60 + self.zeit.second
 		epoch=time.mktime(self.datum.timetuple())+seconds
-		te = datetime.fromtimestamp(epoch).strftime('%Y-%m-%d %H:%M:%S')
+		te = datetime.datetime.fromtimestamp(epoch).strftime('%Y-%m-%d %H:%M:%S')
 		now = int(time.time())
-		tn = datetime.fromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')
+		tn = datetime.datetime.fromtimestamp(now).strftime('%Y-%m-%d %H:%M:%S')
 		if debug:
 			print("epoch %d (%s) now %d (%s)" % (epoch, te, now, tn))
 		# schlimmstenfalls wird Termin 2x angesagt
-		if epoch >= (now-30) and epoch < (now+30): 
+		if epoch >= (now-30) and epoch < (now+30):
 			coutput("Termin")
 			coutput(self.name)
 			coutput("at")

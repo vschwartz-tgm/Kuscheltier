@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
@@ -35,21 +35,23 @@ LINE="--------------------------------------------------------------------"
 import gettext
 
 class BuecherLesen(object):
-	#
-	# This Function allows the user to chose a book to listen to.
-	#
-	def runLesen(self,dev=None, task=None, debug=False):
+
+	def runLesen(self,dev=None, debug=False):
+		#
+		# This Function allows the user to chose a book to listen to.
+		#
+		# :param dev: the device that the input is coming from
+		# :param debug: If debug messages are supposed to be printed
 		#
 		from teddy import getDevice, coutput, getButton, Notfall
 		#
-		self.vorlesen = leseBuch.LeseBuch()		
+		self.vorlesen = leseBuch.LeseBuch()
 		#
 		self.debug=debug
-		if dev is None:	
+		if dev is None:
 			self.dev=getDevice(self.debug)
 		else:
 			self.dev=dev
-		self.task=task
 		if self.debug:
 			print("### Buecher Lesen mit debug output ....")
 		if self.debug:

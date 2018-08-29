@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3
 # coding: utf8
 #
 # @author: Michael Wintersperger <mwintersperger@student.tgm.ac.at>, Simon Appel <sappel@student.tgm.ac.at>
@@ -28,7 +28,13 @@ LINE="--------------------------------------------------------------------"
 import gettext
 
 class Power(object):
-	def __init__(self, debug=False):
+	def checkPower(self, debug=False):
+		#
+		# A Function that reads the file "/sys/class/power_supply/BAT0/status" and reads the status of the power supply.
+		#
+		# :param debug: If debug messages are supposed to be printed
+		#
+		# :return: if the battery is near empty or not
 		#
 		from teddy import coutput
 		#
@@ -36,14 +42,7 @@ class Power(object):
 		if not os.path.exists(self.sysfile):
 			return
 		self.debug=debug
-		self.checkPower(self.debug)
 
-	def checkPower(self, debug=False):
-		#
-		# A Function that reads the file "/sys/class/power_supply/BAT0/status" and reads the status of the power supply.
-		#
-		# :return:
-		#
 		f=open(self.sysfile,"r")
 		status=f.readline()
 		f.close()
