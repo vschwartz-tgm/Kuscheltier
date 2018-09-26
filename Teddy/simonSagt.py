@@ -16,6 +16,15 @@ import psycopg2
 #
 import os
 #
+
+teddy_home="."
+teddy_books="%s/books/" % teddy_home
+import os
+if os.path.exists("/home/pi"):
+	teddy_home="/home/pi/Teddy/"
+	teddy_books="/home/pi/Teddy/books/"
+	teddy_audio="/home/pi/Teddy/AudioFiles"
+
 RECHTER_ARM=1
 LINKER_ARM=2
 RECHTES_BEIN=3
@@ -63,8 +72,6 @@ class SimonSagt(object):
 				print("### Limb %d" % limb)
 			if zahl < 50:
 				coutput("Simon Says")
-				pygame.mixer.music.load(mp3)
-				pygame.mixer.music.play(1, self.vorgelesen - self.overlap)
 				if limb >= 1 and limb < 25:
 					coutput("press my right arm")
 					pressed=getButton(self.dev, debug = self.debug)

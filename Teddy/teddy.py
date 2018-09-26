@@ -28,6 +28,15 @@ from buecherLesen import BuecherLesen as BuecherLesen
 from power import Power as Power
 from termin import Termin as Termin
 #
+
+teddy_home="."
+teddy_books="%s/books/" % teddy_home
+import os
+if os.path.exists("/home/pi"):
+	teddy_home="/home/pi/Teddy/"
+	teddy_books="/home/pi/Teddy/books/"
+	teddy_audio="/home/pi/Teddy/AudioFiles"
+
 RECHTER_ARM=1
 LINKER_ARM=2
 RECHTES_BEIN=3
@@ -312,6 +321,20 @@ class Teddy(object):
 		#
 		# Choose a language
 		#
+
+
+        pygame.display.set_mode((200, 100))
+        #pygame.mixer.music.load('D:\Diplomarbeit\Github\Kuscheltier\Teddy\Einleitung_Hallo2.wav')
+        pygame.mixer.music.load("teddy_audio/Einleitung/Einleitung_Hallo.wav")
+        pygame.mixer.music.play(0)
+
+        clock = pygame.time.Clock()
+        clock.tick(10)
+
+
+		#pygame.mixer.music.play(1, 0)
+
+
 		global teddy_language
 		coutput("Choose your language, press the right arm for german and the left arm for english")
 		pressed=getButton(self.dev, 10, self.debug)
