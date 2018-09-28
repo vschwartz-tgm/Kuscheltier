@@ -322,20 +322,20 @@ class Teddy(object):
 		# Choose a language
 		#
 
+        #pygame.display.set_mode((200, 100))
 
-        pygame.display.set_mode((200, 100))
         #pygame.mixer.music.load('D:\Diplomarbeit\Github\Kuscheltier\Teddy\Einleitung_Hallo2.wav')
-        pygame.mixer.music.load("teddy_audio/Einleitung/Einleitung_Hallo.wav")
-        pygame.mixer.music.play(0)
+        #pygame.mixer.music.load("teddy_audio/Einleitung/Einleitung_Hallo.wav")
+        #pygame.mixer.music.play(0)
 
-        clock = pygame.time.Clock()
-        clock.tick(10)
+        #clock = pygame.time.Clock()
+        #clock.tick(10)
 
 
 		#pygame.mixer.music.play(1, 0)
 
 
-		global teddy_language
+
 		coutput("Choose your language, press the right arm for german and the left arm for english")
 		pressed=getButton(self.dev, 10, self.debug)
 		if pressed==RECHTER_ARM:
